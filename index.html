@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <div class="language-selector">
+    <select id="languageSelector">
+      <option value="en" title="English">🇬🇧</option>
+      <option value="fr" title="Français">🇫🇷</option>
+      <option value="jp" title="Japanese">🇯🇵</option>
+    </select>
+  </div>
+
+  <header>
+    <div class="logo" data-i18n="logo"></div>
+    <nav class="nav-links">
+      <a data-i18n="homeLink" id="homeLink"></a>
+      <a data-i18n="projectsLink" id="projectsLink"></a>
+      <a data-i18n="contactLink" id="contactLink"></a>
+    </nav>
+  </header>
+
+  <section id="homeSection" class="content-section active">
+    <div class="hero">
+      <h1 data-i18n="heroTitle"></h1>
+      <p data-i18n="heroDescription"></p>
+    </div>
+  </section>
+
+  <section id="projectsSection" class="content-section projects-section">
+    <div class="projects-grid">
+      <div class="project-card" data-project="project1">
+        <h3 data-i18n="project1Title"></h3>
+      </div>
+      <div class="project-card" data-project="project2">
+        <h3 data-i18n="project2Title"></h3>
+      </div>
+      <div class="project-card" data-project="project3">
+        <h3 data-i18n="project3Title"></h3>
+      </div>
+    </div>
+    <div class="project-details" id="projectDetails"></div>
+  </section>
+
+  <div id="contactDropdown" class="contact-dropdown" style="display: none;">
+    <a href="mailto:your.email@example.com">your.email@example.com</a>
+    <a href="tel:+1234567890">+1 (234) 567-890</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a>
+  </div>
+
+  <nav class="mobile-nav">
+    <a id="mobileHomeLink"><i class="fas fa-home"></i><span data-i18n="homeLink"></span></a>
+    <a id="mobileProjectsLink"><i class="fas fa-project-diagram"></i><span data-i18n="projectsLink"></span></a>
+    <a id="mobileContactLink"><i class="fas fa-envelope"></i><span data-i18n="contactLink"></span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
