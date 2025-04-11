@@ -5,14 +5,14 @@
   "contactLink": "連絡先",
   "heroTitle": "こんにちは、アバアルール・モアドです",
   "heroDescription": "革新的なソリューションを創造し、技術とデザインを通じてアイデアを形にすることに情熱を注ぐクリエイティブなプロフェッショナルです。",
-  "project1Title": "プロジェクト 1",
-  "project1Description": "プロジェクト1の説明",
-  "project1Details": "使用された技術、克服した課題、主な成果を含むプロジェクト1の詳細な説明。",
-  "project2Title": "プロジェクト 2",
-  "project2Description": "プロジェクト2の説明",
-  "project2Details": "革新的なアプローチとプロジェクトの影響を強調するプロジェクト2の詳細。",
+  "project1Title": "MECL",
+
+  "project2Title": "Friandos",
+
+  
   "project3Title": "SliceMyPDF",
   "project3Description": "SliceMyPDFは、ユーザーがPDFドキュメントをアップロードし、特定のページや範囲を抽出して、必要なコンテンツのみを含む新しいPDFファイルを作成できるようにするWebアプリケーションです。PythonとFlask Webフレームワークを使用して構築され、HTML、CSS、JavaScriptで開発された直感的なインターフェースを提供します。このアプリケーションはAWS EC2でホストされたUbuntuサーバーにデプロイされており、拡張性と信頼性を確保しています。",
+  
   "screenshotsLabel": "アプリケーションのスクリーンショット",
   "desktopLabel": "デスクトップインターフェース",
   "mobileLabel": "モバイル体験",
@@ -20,6 +20,7 @@
   "desktopSelectionCaption": "ページ選択インターフェース（デスクトップ）",
   "mobileUploadCaption": "PDFのアップロード（モバイル）",
   "mobileSelectionCaption": "ページ選択（モバイル）",
+  
   "featuresLabel": "主な機能",
   "techStackLabel": "技術スタック",
   "workflowLabel": "動作の流れ",
@@ -28,11 +29,167 @@
   "conclusionLabel": "まとめ",
   "githubLabel": "GitHub",
   "websiteLabel": "ウェブサイト",
-  "project1GithubUrl": "https://github.com/yourusername/project1",
-  "project1WebsiteUrl": "https://project1.yourdomain.com",
-  "project2GithubUrl": "https://github.com/yourusername/project2",
-  "project2WebsiteUrl": "https://project2.yourdomain.com",
-  "project3GithubUrl": "https://github.com/ourouchy/SliceMyPDF",
-  "project3WebsiteUrl": "https://slicemypdf.me"
 
+  "projects": {
+    "project1": {
+      "title": "MECL",
+      "description": "Vue.jsとLaravelで構築された完全にカスタマイズ可能なeコマースダッシュボード。クライアントは洗練された管理パネルから商品、注文、カテゴリ、顧客、レポートを管理でき、商品バリエーション、ライブ売上追跡、カルーセル制御などの動的機能を備えています。",
+      "details": "MECL（Modular Ecommerce Laravel）は、ストア管理を完全にコントロールしたい企業向けに設計された柔軟で拡張可能なeコマースプラットフォームです。<p><p>Vue.jsで構築されたクライアント向けダッシュボードは、API経由でLaravel（PHP）バックエンドに接続する強力なコントロールセンターとして機能します。<p><p>ダッシュボードの主な機能:<p>- 商品管理: サイズのカスタマイズ、オプションカテゴリ、サイズに基づく動的価格設定が可能な商品追加/削除<p>- サイズ設定: 制限なく独自のサイズオプションを定義・管理<p>- カテゴリ: 親子関係を持つ無制限のネスト型カテゴリ<p>- 注文管理: リアルタイムステータス更新付き完全な注文履歴（顧客へのメール通知とフロントエンド反映）<p>- 顧客＆ユーザー: 顧客データとプラットフォームアクセス制御の管理<p>- レポート: チャートによる視覚的な販売/顧客分析（日次/月次/年次レポート）<p>- カルーセル管理: ホームページのカルーセルを画像・ボタンテキスト・リンクでカスタマイズ可能<p><p>モジュール式設計で100%カスタマイズ可能なため、クライアントの要望に応じて新機能を追加できます。今後のアップデート予定: 割引、プロモコード、商品レビュー機能。",
+      "tech": "Laravel, VueJs, TailwindCSS",
+
+      
+      "screenshots": {
+        "desktop": [
+          {
+            "src": "images/mecl/mecl_dashboard.png",
+            "alt": "管理者ダッシュボードの概要",
+            "caption": "メインダッシュボードの概要"
+          },
+          {
+            "src": "images/mecl/mecl_front.png",
+            "alt": "公開サイトプレビュー",
+            "caption": "公開サイトフロントページ"
+          },
+          {
+            "src": "images/mecl/mecl_products.png",
+            "alt": "商品リスト管理",
+            "caption": "商品管理画面"
+          },
+          {
+            "src": "images/mecl/mecl_createP.png",
+            "alt": "新規商品作成画面",
+            "caption": "新規商品作成"
+          },
+          {
+            "src": "images/mecl/mecl_categories.png",
+            "alt": "カテゴリ管理画面",
+            "caption": "商品カテゴリ管理"
+          },
+          {
+            "src": "images/mecl/mecl_carrousel.png",
+            "alt": "カルーセル編集インターフェイス",
+            "caption": "ホームページカルーセル管理"
+          },
+          {
+            "src": "images/mecl/mecl_customers.png",
+            "alt": "顧客リスト表示",
+            "caption": "顧客管理"
+          },
+          {
+            "src": "images/mecl/mecl_orders.png",
+            "alt": "注文と追跡管理",
+            "caption": "注文確認・追跡"
+          },
+          {
+            "src": "images/mecl/mecl_users.png",
+            "alt": "ユーザー権限とロール管理",
+            "caption": "ユーザーロール＆権限設定"
+          },
+          {
+            "src": "images/mecl/mecl_reports.png",
+            "alt": "販売・アクティビティレポート",
+            "caption": "販売＆アクティビティ分析"
+          },
+          {
+            "src": "images/mecl/mecl-stripe.png",
+            "alt": "Stripe決済画面",
+            "caption": "決済管理"
+          }
+        ]
+      }
+    },
+
+    "project2": {
+      "title": "Friandos",
+      "description": "MECLスターターキットを使用して構築されたカスタマイズされたeコマースプラットフォーム。商品フィルター、ディスカウント、レビュー、サイズ別価格設定を備えた動的な顧客ストアフロントを特徴とし、本番環境対応の実装を実証しています。",
+      "details": "Friandosは、私が開発したカスタムeコマースフレームワーク「MECL（Modular Ecommerce Laravel）」の商用デモンストレーションで、実際の使用例を示すように調整されています。<p><p>MECLを基盤として構築されたFriandosは、オリジナルのスターターキットを拡張し、完全な顧客向けストアフロント、高度なフィルタリングオプション、ディスカウントシステム、商品レビューなどを備えています。これらはすべてVue.jsとLaravelのバックエンドとシームレスに接続されています。<p><p>プラットフォームの主な機能:<p>- 商品表示: サイズやディスカウントを含む動的な価格帯に対応したレスポンシブな商品カタログ<p>- 高度なフィルター: サイズ、ブランド、価格帯、在庫状況によるフィルタリング<p>- ディスカウント: オリジナル価格と現在の価格に基づくリアルタイムディスカウント（割合表示と取り消し線価格）<p>- レビューシステム: 認証済みユーザーが商品に評価とコメントを残せる<p>- レスポンシブフロントエンド: Tailwind CSSとAlpine.jsを使用した完全カスタムフロントエンド<p>- カートとチェックアウト: ユーザーは商品をカートに追加（サイズバリアントあり/なし）し、チェックアウト（ゲストまたは認証ユーザー）可能<p>- 管理ダッシュボード: 商品、サイズ、ディスカウント、カテゴリー、ブランド、ユーザー、注文、分析の管理<p><p>プロジェクトはOVH VPS（Ubuntuサーバー）でホストされており、プロモコードやウィッシュリストなどの将来の機能追加に向けて拡張可能に設計されています。<p><p>Friandosは、ゼロからエンドツーエンドのeコマースソリューションを構築・展開する能力を実証する完全なコンセプト実証として機能します。",
+      "tech": "Laravel, VueJs, AlpineJs, TailwindCSS",
+      "websiteUrl": "https://friandos.fr",
+      "screenshots": {
+        "desktop": [
+          {
+            "src": "images/friandos/fdekstop-brands.png",
+            "alt": "ブランド管理",
+            "caption": "ブランド管理"
+          },
+          {
+            "src": "images/friandos/fdekstop-categories.png",
+            "alt": "カテゴリー管理",
+            "caption": "カテゴリー管理"
+          },
+          {
+            "src": "images/friandos/fdesktop-products.png",
+            "alt": "商品管理",
+            "caption": "商品管理"
+          },
+          {
+            "src": "images/friandos/fdesktop-reports.png",
+            "alt": "レポート概要",
+            "caption": "レポート概要"
+          },
+          {
+            "src": "images/friandos/fdesktop-cart.png",
+            "alt": "ゲストとしてのカート",
+            "caption": "ゲストとしてのカート"
+          },
+          {
+            "src": "images/friandos/fdesktop-checkout.png",
+            "alt": "ゲストとしてのチェックアウト",
+            "caption": "ゲストとしてのチェックアウト"
+          },
+          {
+            "src": "images/friandos/fdesktop-order.png",
+            "alt": "注文詳細",
+            "caption": "ダッシュボード内の注文詳細"
+          },
+          {
+            "src": "images/friandos/fdesktop-carrousel.png",
+            "alt": "カルーセル管理",
+            "caption": "カルーセル管理"
+          },
+          {
+            "src": "images/friandos/fdekstop-succesfull.png",
+            "alt": "注文完了ページ",
+            "caption": "注文完了ページ"
+          }
+        ]
+      }
+    },
+
+    "project3": {
+      "title": "SliceMyPDF",
+      "description": "SliceMyPDFは、ユーザーがPDFドキュメントをアップロードし、特定のページや範囲を抽出して、必要なコンテンツのみを含む新しいPDFファイルを作成できるようにするWebアプリケーションです。PythonとFlask Webフレームワークを使用して構築され、HTML、CSS、JavaScriptで開発された直感的なインターフェースを提供します。このアプリケーションはAWS EC2でホストされたUbuntuサーバーにデプロイされており、拡張性と信頼性を確保しています。",
+      "details": "",
+      "tech": "",
+      "githubUrl": "https://github.com/ourouchy/SliceMyPDF",
+      "websiteUrl": "https://slicemypdf.me",
+      
+      "screenshots": {
+        "desktop": [
+          {
+            "src": "images/desktop-upload.jpg",
+            "alt": "デスクトップアップロードインターフェース",
+            "caption": "PDFのアップロードとプレビュー（デスクトップ）"
+          },
+          {
+            "src": "images/desktop-selection.jpg",
+            "alt": "デスクトップページ選択インターフェース",
+            "caption": "ページ選択インターフェース（デスクトップ）"
+          }
+        ],
+        "mobile": [
+          {
+            "src": "images/mobile-upload.jpg",
+            "alt": "モバイルアップロードインターフェース",
+            "caption": "PDFのアップロード（モバイル）"
+          },
+          {
+            "src": "images/mobile-selection.jpg",
+            "alt": "モバイルページ選択インターフェース",
+            "caption": "ページ選択（モバイル）"
+          }
+        ]
+      }
+    }
+  }
 }

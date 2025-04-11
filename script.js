@@ -41,35 +41,163 @@ function applyTranslations() {
     showProjectDetails(activeProject.dataset.project);
   }
 }
+function renderProjectDetails(projectId) {
+  const project = currentTranslations.projects?.[projectId];
+  const detailsContainer = document.getElementById('projectDetails');
+
+  if (!project) {
+    // Fallback if there's no data for this project
+    detailsContainer.innerHTML = `<p>Project data not found.</p>`;
+    return;
+  }
+
+  const {
+    title = '',
+    description = '',
+    details = '',
+    tech = '',
+    githubUrl = '',
+    websiteUrl = '',
+    screenshots
+  } = project;
+
+  // Build up the HTML
+  let html = `
+    <div class="project-full-details">
+      <h2>${title}</h2>
+      ${renderProjectLinks(githubUrl, websiteUrl)}
+      <div class="project-intro">
+        <p>${description}</p>
+      </div>
+  `;
+
+  // If there's a screenshots object, render "enhanced" layout
+  if (screenshots && (screenshots.desktop || screenshots.mobile)) {
+    html += `
+      <div class="project-screenshots">
+        <h3>${currentTranslations.screenshotsLabel || 'Application Screenshots'}</h3>
+        <div class="screenshots-container ${screenshots.desktop && !screenshots.mobile ? 'single-column' : ''}">
+          ${screenshots.desktop ? renderScreenshotsGroup('desktop', screenshots.desktop) : ''}
+          ${screenshots.mobile ? renderScreenshotsGroup('mobile', screenshots.mobile) : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  // Add the details
+  if (details) {
+    html += `
+      <div class="details-content">
+        <p>${details}</p>
+      </div>
+    `;
+  }
+
+  // Add the tech stack
+  if (tech) {
+    html += `
+      <div class="tech-stack">
+        <strong>${currentTranslations.techStackLabel || 'Technologies'}:</strong> ${tech}
+      </div>
+    `;
+  }
+
+  // Close the container
+  html += `</div>`;
+
+  detailsContainer.innerHTML = html;
+
+  // Initialize image modal if there are screenshots
+  if (screenshots && (screenshots.desktop || screenshots.mobile)) {
+    initImageModalFunctionality();
+  }
+}
+function renderProjectLinks(githubUrl, websiteUrl) {
+  // If neither link is present, return an empty string
+  if (!githubUrl && !websiteUrl) return '';
+
+  let linksHTML = '';
+
+// Only show .project-links if at least one thing should be displayed
+if (githubUrl || websiteUrl) {
+  linksHTML += `<div class="project-links">`;
+
+  if (githubUrl) {
+    linksHTML += `
+      <a href="${githubUrl}" target="_blank" class="github-link" title="GitHub" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    `;
+  } else {
+    // GitHub not available → Private use
+    linksHTML += `
+      <span class="private-repo" title="Private – Commercial Use" aria-label="Private Repository">
+        <i class="fas fa-lock"></i>
+      </span>
+    `;
+  }
+
+  if (websiteUrl) {
+    linksHTML += `
+      <a href="${websiteUrl}" target="_blank" class="website-link" title="Website" aria-label="Website">
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    `;
+  }
+
+  linksHTML += `</div>`;
+}
+
+  return linksHTML;
+}
+function renderScreenshotsGroup(type, screenshotsArray) {
+  if (!screenshotsArray || !Array.isArray(screenshotsArray) || !screenshotsArray.length) {
+    return '';
+  }
+
+  const label = (type === 'desktop')
+    ? currentTranslations.desktopLabel || 'Desktop Interface'
+    : currentTranslations.mobileLabel || 'Mobile Experience';
+
+  // Build the screenshots HTML
+  let groupHTML = `
+    <div class="screenshot-group">
+      <h4>${label}</h4>
+      <div class="${type}-screenshots">
+  `;
+
+  screenshotsArray.forEach(screenshot => {
+    groupHTML += `
+      <div class="screenshot">
+        <img src="${screenshot.src}" alt="${screenshot.alt}" class="screenshot-img">
+        <p class="caption">${screenshot.caption}</p>
+      </div>
+    `;
+  });
+
+  groupHTML += `</div></div>`;
+  return groupHTML;
+}
 
 // Show project details with animation
 function showProjectDetails(projectId) {
-  // First hide the details to set up animation
   const detailsContainer = document.getElementById('projectDetails');
   detailsContainer.classList.remove('active');
-  
-  // Add a slight delay before showing new details
+
   setTimeout(() => {
-    // Update active states for cards
+    // Update which card is active
     document.querySelectorAll('.project-card').forEach(card => {
-      if (card.dataset.project === projectId) {
-        card.classList.remove('inactive');
-      } else {
-        card.classList.add('inactive');
-      }
+      card.dataset.project === projectId
+        ? card.classList.remove('inactive')
+        : card.classList.add('inactive');
     });
 
-    // Special handling for SliceMyPDF project (project3)
-    if (projectId === 'project3') {
-      loadEnhancedProjectDetails(projectId);
-    } else {
-      // Regular handling for other projects
-      loadStandardProjectDetails(projectId);
-    }
-    
+    // Render details in a single function
+    renderProjectDetails(projectId);
+
     // Show with animation
     detailsContainer.classList.add('active');
-    
+
     // Scroll into view on mobile
     if (window.innerWidth < 768) {
       detailsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -77,167 +205,81 @@ function showProjectDetails(projectId) {
   }, 300);
 }
 
-// Load standard project details from translations
-function loadStandardProjectDetails(projectId) {
-  const detailsContainer = document.getElementById('projectDetails');
-  const title = currentTranslations[`${projectId}Title`] || '';
-  const desc = currentTranslations[`${projectId}Details`] || '';
-  const tech = currentTranslations[`${projectId}Tech`] || '';
-  
-  // Create HTML with more structure
-  detailsContainer.innerHTML = `
-    <h2>${title}</h2>
-    <div class="project-content">
-      <p>${desc}</p>
-      ${tech ? `<div class="tech-stack"><strong>${currentTranslations.techStackLabel || 'Technologies'}:</strong> ${tech}</div>` : ''}
-    </div>
-  `;
-}
 
-// Load enhanced project details for SliceMyPDF
-function loadEnhancedProjectDetails(projectId) {
-  const detailsContainer = document.getElementById('projectDetails');
-  
-  // Create the enhanced UI dynamically
-  detailsContainer.innerHTML = createEnhancedProjectHTML(projectId);
-  
-  // Initialize image modal functionality
-  initImageModalFunctionality();
-}
-
-// Create enhanced project HTML for SliceMyPDF
-function createEnhancedProjectHTML(projectId) {
-  // Get the title and description from translations
-  const title = currentTranslations[`${projectId}Title`] || 'SliceMyPDF';
-  const desc = currentTranslations[`${projectId}Description`] || '';
-  const details = currentTranslations[`${projectId}Details`] || '';
-  const tech = currentTranslations[`${projectId}Tech`] || '';
-  
-  // Get GitHub and website URLs from translations (if available)
-  // Fallback to project-specific hardcoded values if not in translations
-  let githubUrl = '';
-  let websiteUrl = '';
-  
-  // You can add logic here to set specific URLs based on projectId
-  // For example:
-  if (projectId === 'project3') { // SliceMyPDF
-    githubUrl = 'https://github.com/yourusername/SliceMyPDF';
-    websiteUrl = 'https://slicemypdf.yourdomain.com';
-  }
-  
-  // Check if we have URLs in translations (these would override the hardcoded values)
-  if (currentTranslations[`${projectId}GithubUrl`]) {
-    githubUrl = currentTranslations[`${projectId}GithubUrl`];
-  }
-  
-  if (currentTranslations[`${projectId}WebsiteUrl`]) {
-    websiteUrl = currentTranslations[`${projectId}WebsiteUrl`];
-  }
-  
-  // Create links section if URLs are available
-  let linksHTML = '';
-  if (githubUrl || websiteUrl) {
-    linksHTML = '<div class="project-links">';
-    if (githubUrl) {
-      linksHTML += `<a href="${githubUrl}" target="_blank" class="github-link"><i class="fa fa-github"></i> ${currentTranslations.githubLabel || 'GitHub'}</a>`;
-    }
-    if (websiteUrl) {
-      linksHTML += `<a href="${websiteUrl}" target="_blank" class="website-link"><i class="fa fa-external-link"></i> ${currentTranslations.websiteLabel || 'Website'}</a>`;
-    }
-    linksHTML += '</div>';
-  }
-  
-  return `
-    <div class="project-full-details">
-      <h2>${title}</h2>
-      
-      ${linksHTML}
-      
-      <div class="project-intro">
-        <p>${desc}</p>
-      </div>
-      
-      <div class="project-screenshots">
-        <h3>${currentTranslations.screenshotsLabel || 'Application Screenshots'}</h3>
-        <div class="screenshots-container">
-          <div class="screenshot-group">
-            <h4>${currentTranslations.desktopLabel || 'Desktop Interface'}</h4>
-            <div class="desktop-screenshots">
-              <div class="screenshot">
-                <img src="images/desktop-upload.jpg" alt="Desktop Upload Interface" class="screenshot-img">
-                <p class="caption">${currentTranslations.desktopUploadCaption || 'PDF Upload and Preview (Desktop)'}</p>
-              </div>
-              <div class="screenshot">
-                <img src="images/desktop-selection.jpg" alt="Desktop Page Selection" class="screenshot-img">
-                <p class="caption">${currentTranslations.desktopSelectionCaption || 'Page Selection Interface (Desktop)'}</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="screenshot-group">
-            <h4>${currentTranslations.mobileLabel || 'Mobile Experience'}</h4>
-            <div class="mobile-screenshots">
-              <div class="screenshot">
-                <img src="images/mobile-upload.jpg" alt="Mobile Upload Interface" class="screenshot-img">
-                <p class="caption">${currentTranslations.mobileUploadCaption || 'PDF Upload (Mobile)'}</p>
-              </div>
-              <div class="screenshot">
-                <img src="images/mobile-selection.jpg" alt="Mobile Page Selection" class="screenshot-img">
-                <p class="caption">${currentTranslations.mobileSelectionCaption || 'Page Selection (Mobile)'}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="details-content">
-        <p>${details}</p>
-      </div>
-      
-      ${tech ? `<div class="tech-stack"><strong>${currentTranslations.techStackLabel || 'Technologies'}:</strong> ${tech}</div>` : ''}
-    </div>
-  `;
-}
-
-// Initialize image modal functionality
 function initImageModalFunctionality() {
-  // Remove any existing event listeners
-  const existingScreenshots = document.querySelectorAll('.screenshot-img');
-  existingScreenshots.forEach(img => {
+  const screenshots = document.querySelectorAll('.screenshot-img');
+  const images = Array.from(screenshots);
+
+  // Clean up any old event listeners
+  images.forEach(img => {
     const newImg = img.cloneNode(true);
     img.parentNode.replaceChild(newImg, img);
   });
-  
-  // Add click event listeners for screenshots
-  document.querySelectorAll('.screenshot-img').forEach(img => {
-    img.addEventListener('click', function() {
+
+  // Add new click listeners
+  document.querySelectorAll('.screenshot-img').forEach((img, index) => {
+    img.addEventListener('click', function () {
+      let currentIndex = index;
+
       const modal = document.createElement('div');
       modal.classList.add('image-modal');
-      
+
       const modalImg = document.createElement('img');
-      modalImg.src = this.src;
-      
+      modalImg.src = images[currentIndex].src;
+
       const closeButton = document.createElement('span');
       closeButton.classList.add('close-modal');
       closeButton.innerHTML = '&times;';
-      closeButton.onclick = function() {
+      closeButton.onclick = () => {
         document.body.removeChild(modal);
+        document.removeEventListener('keydown', keyListener);
       };
-      
+
+      const prevButton = document.createElement('span');
+      prevButton.classList.add('modal-nav', 'prev');
+      prevButton.innerHTML = '&#10094;';
+      prevButton.onclick = (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        modalImg.src = images[currentIndex].src;
+      };
+
+      const nextButton = document.createElement('span');
+      nextButton.classList.add('modal-nav', 'next');
+      nextButton.innerHTML = '&#10095;';
+      nextButton.onclick = (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImg.src = images[currentIndex].src;
+      };
+
       modal.appendChild(closeButton);
+      modal.appendChild(prevButton);
       modal.appendChild(modalImg);
+      modal.appendChild(nextButton);
       document.body.appendChild(modal);
-      
-      // Close modal when clicking outside the image
-      modal.onclick = function(e) {
+
+      modal.onclick = function (e) {
         if (e.target === modal) {
           document.body.removeChild(modal);
+          document.removeEventListener('keydown', keyListener);
         }
       };
+
+      // Keyboard navigation
+      const keyListener = (e) => {
+        if (e.key === 'ArrowLeft') prevButton.click();
+        if (e.key === 'ArrowRight') nextButton.click();
+        if (e.key === 'Escape') {
+          document.body.removeChild(modal);
+          document.removeEventListener('keydown', keyListener);
+        }
+      };
+      document.addEventListener('keydown', keyListener);
     });
   });
-  
-  // Add modal style if not already present
+
+  // Add styles if not already added
   if (!document.getElementById('modal-style')) {
     const style = document.createElement('style');
     style.id = 'modal-style';
@@ -254,12 +296,12 @@ function initImageModalFunctionality() {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.9);
       }
-      
+
       .image-modal img {
         max-width: 90%;
         max-height: 90%;
       }
-      
+
       .close-modal {
         position: absolute;
         top: 15px;
@@ -269,10 +311,36 @@ function initImageModalFunctionality() {
         font-weight: bold;
         cursor: pointer;
       }
+
+      .modal-nav {
+        position: absolute;
+        top: 50%;
+        font-size: 3rem;
+        color: white;
+        padding: 0 15px;
+        cursor: pointer;
+        user-select: none;
+        transform: translateY(-50%);
+        z-index: 1001;
+        transition: 0.3s;
+      }
+
+      .modal-nav:hover {
+        color: #ccc;
+      }
+
+      .modal-nav.prev {
+        left: 0;
+      }
+
+      .modal-nav.next {
+        right: 0;
+      }
     `;
     document.head.appendChild(style);
   }
 }
+
 
 // Switch between sections with smooth transitions
 function switchContent(sectionId) {

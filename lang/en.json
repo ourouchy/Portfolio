@@ -4,34 +4,197 @@
   "projectsLink": "Projects",
   "contactLink": "Contact",
   "heroTitle": "Hi, I'm Abaarour Moad",
-  "heroDescription": "A creative professional passionate about crafting innovative solutions and bringing ideas to life through technology and design.",
-  "project1Title": "Project 1",
+  "heroDescription": "A creative professional passionate about...",
+
+
+   
+  "project1Title": "MECL",
   "project1Description": "Description of project 1",
-  "project1Details": "Detailed description of Project 1, including technologies used, challenges overcome, and key achievements.",
-  "project2Title": "Project 2",
+  "project1Details": "Detailed explanation of Project 1, including technologies used, challenges overcome, and key achievements.",
+
+
+
+  "project2Title": "Friandos",
   "project2Description": "Description of project 2",
-  "project2Details": "Detailed description of Project 2, highlighting the innovative approach and impact of the project.",
+  "project2Details": "In-depth overview of Project 2, highlighting the innovative approach and overall project impact.",
+
+
+
   "project3Title": "SliceMyPDF",
-  "project3Description": "SliceMyPDF is a web application designed to enable users to upload PDF documents and extract specific pages or ranges, creating new PDF files containing only the desired content. Built using Python and the Flask web framework, it offers a straightforward interface developed with HTML, CSS, and JavaScript. The application is deployed on an Ubuntu server hosted on AWS EC2, ensuring scalability and reliability.​",
+  "project3Description": "SliceMyPDF is a web application designed to enable users to upload PDF documents and extract specific pages or ranges, creating new PDF files containing only the desired content. Built using Python and the Flask web framework, it offers a straightforward interface developed with HTML, CSS, and JavaScript. The application is deployed on an Ubuntu server hosted on AWS EC2, ensuring scalability and reliability.",
+
   "screenshotsLabel": "Application Screenshots",
   "desktopLabel": "Desktop Interface",
   "mobileLabel": "Mobile Experience",
-  "desktopUploadCaption": "PDF Upload and Preview (Desktop)",
-  "desktopSelectionCaption": "Page Selection Interface (Desktop)",
-  "mobileUploadCaption": "PDF Upload (Mobile)",
-  "mobileSelectionCaption": "Page Selection (Mobile)",
-  "featuresLabel": "Key Features",
   "techStackLabel": "Technology Stack",
-  "workflowLabel": "How It Works",
-  "challengesLabel": "Challenges and Solutions",
-  "futureLabel": "Future Enhancements",
-  "conclusionLabel": "Conclusion",
   "githubLabel": "GitHub",
   "websiteLabel": "Website",
-  "project1GithubUrl": "https://github.com/yourusername/project1",
-  "project1WebsiteUrl": "https://project1.yourdomain.com",
-  "project2GithubUrl": "https://github.com/yourusername/project2",
-  "project2WebsiteUrl": "https://project2.yourdomain.com",
-  "project3GithubUrl": "https://github.com/ourouchy/SliceMyPDF",
-  "project3WebsiteUrl": "https://slicemypdf.me"
+
+  "projects": {
+    "project1": {
+      "title": "MECL",
+      "description": "A fully customizable ecommerce dashboard built with Vue.js and Laravel. Clients can manage products, orders, categories, customers, and reports from a sleek admin panel, with dynamic features like product variants, live sales tracking, and carousel control.",
+      "details": "MECL (Modular Ecommerce Laravel) is a flexible and scalable ecommerce platform designed for businesses who want full control over their store management.<p><p>The client-facing dashboard, built in Vue.js, acts as a powerful control center connected to a Laravel (PHP) backend via API.<p><p>The dashboard offers the following features:<p>- Products: Add or remove products with customizable sizes, optional categories, and dynamic pricing based on size.<p>- Sizes: Clients can define and manage their own size options without limitations.<p>- Categories: Unlimited nested categories with parent-child relationships.<p>- Orders: Complete order history with real-time status updates that trigger email notifications to customers and reflect on the frontend.<p>- Customers & Users: Admins manage customer records and platform access control.<p>- Reports: Visual sales/customer analytics via charts (daily/monthly/yearly breakdowns).<p>- Carousel Management: Clients can personalize homepage carousels with images, button text, and links.<p><p>The project is modular and 100% customizable, allowing new features to be added per client request. Future updates include: discounts, promo codes, and product reviews.",
+      "tech": "Laravel, VueJs, TailwindCSS.",
+      "screenshots": {
+        "desktop": [
+          {
+            "src": "images/mecl/mecl_dashboard.png",
+            "alt": "Admin dashboard overview",
+            "caption": "Main Dashboard Overview"
+          },
+          {
+            "src": "images/mecl/mecl_front.png",
+            "alt": "Public site preview",
+            "caption": "Public Site Front Page"
+          },
+          {
+            "src": "images/mecl/mecl_products.png",
+            "alt": "Product list management",
+            "caption": "Product Management View"
+          },
+          {
+            "src": "images/mecl/mecl_createP.png",
+            "alt": "Create new product screen",
+            "caption": "Creating a New Product"
+          },
+          {
+            "src": "images/mecl/mecl_categories.png",
+            "alt": "Category management page",
+            "caption": "Manage Product Categories"
+          },
+          {
+            "src": "images/mecl/mecl_carrousel.png",
+            "alt": "Carousel editor interface",
+            "caption": "Homepage Carousel Management"
+          },
+          {
+            "src": "images/mecl/mecl_customers.png",
+            "alt": "Customers list view",
+            "caption": "Customer Management"
+          },
+          {
+            "src": "images/mecl/mecl_orders.png",
+            "alt": "Orders and tracking",
+            "caption": "View and Track Orders"
+          },
+          {
+            "src": "images/mecl/mecl_users.png",
+            "alt": "User permissions and roles",
+            "caption": "User Roles & Permissions"
+          },
+          {
+            "src": "images/mecl/mecl_reports.png",
+            "alt": "Sales and activity reports",
+            "caption": "Sales & Activity Reports"
+          },
+          {
+            "src": "images/mecl/mecl-stripe.png",
+            "alt": "Stripe view",
+            "caption": "Payment"
+          }
+
+          
+        ]
+        
+          
+        
+      }
+
+    },
+
+    "project2": {
+      "title": "Friandos",
+      
+      "description": "A customized e-commerce platform built using the MECL starter kit, featuring a dynamic customer storefront with product filters, discounts, reviews, and size-based pricing. Designed to demonstrate a production-ready implementation.",
+      "details": "Friandos is a commercial demonstration of my custom e-commerce framework, MECL (Modular Ecommerce Laravel), tailored to show real-world usage.<p><p>Built on top of MECL, Friandos extends the original starter kit with a complete customer-facing storefront, advanced filtering options, discount systems, and product reviews — everything connected seamlessly to a Vue.js + Laravel backend.<p><p>The platform includes:<p>- Product Display: Customers can browse a responsive product catalog with dynamic price ranges (including sizes and discounts).<p>- Advanced Filters: By size, brand, price range, and stock availability.<p>- Discounts: Real-time discounts based on original and current prices, with percentage badges and strikethrough pricing.<p>- Reviews System: Authenticated users can leave ratings and comments on products.<p>- Responsive Frontend: A fully custom frontend using Tailwind CSS and Alpine.js.<p>- Cart and Checkout: Users can add products to cart (with or without size variants) and proceed to checkout (guest or authenticated).<p>- Admin Dashboard: Manage products, sizes, discounts, categories, brands, users, orders, and analytics.<p><p>The project is hosted on an OVH VPS (Ubuntu server) and built to be scalable for future features such as promo codes and wishlists.<p><p>Friandos serves as a complete proof of concept to demonstrate my ability to build and deploy an end-to-end ecommerce solution from scratch.",
+      "tech": "Laravel, VueJs, AlpineJs, TailwindCSS",
+      "websiteUrl": "https://friandos.fr",
+      "screenshots": {
+        "desktop" : [
+          {
+            "src": "images/friandos/fdekstop-brands.png",
+            "alt": "Brands Management",
+            "caption": "Brands Management"
+          },
+          {
+            "src": "images/friandos/fdekstop-categories.png",
+            "alt": "Categories Management",
+            "caption": "Categories Management"
+          },
+          {
+            "src": "images/friandos/fdesktop-products.png",
+            "alt": "Products Management",
+            "caption": "Products Management"
+          },
+          {
+            "src": "images/friandos/fdesktop-reports.png",
+            "alt": "Reports overview",
+            "caption": "Reports overview"
+          },
+          {
+            "src": "images/friandos/fdesktop-cart.png",
+            "alt": "Cart as a guest",
+            "caption": "Cart as a guest"
+          },
+          {
+            "src": "images/friandos/fdesktop-checkout.png",
+            "alt": "Checkout as a guest",
+            "caption": "Checkout as a guest"
+          },
+          {
+            "src": "images/friandos/fdesktop-order.png",
+            "alt": "Order details",
+            "caption": "Order details in dashboard"
+          },
+          {
+            "src": "images/friandos/fdesktop-carrousel.png",
+            "alt": "Carrousel Management",
+            "caption": "Carrousel Management"
+          },          {
+            "src": "images/friandos/fdekstop-succesfull.png",
+            "alt": "Successfull Order page",
+            "caption": "Successfull Order page"
+          }
+        ]
+      }
+
+    },
+
+    "project3": {
+      "title": "SliceMyPDF",
+      "description": "SliceMyPDF is a web application designed to enable users to upload PDF documents and extract specific pages or ranges, creating new PDF files containing only the desired content. Built using Python and the Flask web framework, it offers a straightforward interface developed with HTML, CSS, and JavaScript. The application is deployed on an Ubuntu server hosted on AWS EC2, ensuring scalability and reliability.​",
+      "details": "More detailed explanation about how SliceMyPDF works...",
+      "tech": "Python, Flask, HTML, CSS, JavaScript",
+      "githubUrl": "https://github.com/ourouchy/SliceMyPDF",
+      "websiteUrl": "https://slicemypdf.me",
+
+      "screenshots": {
+        "desktop": [
+          {
+            "src": "images/desktop-upload.jpg",
+            "alt": "Desktop Upload Interface",
+            "caption": "PDF Upload and Preview (Desktop)"
+          },
+          {
+            "src": "images/desktop-selection.jpg",
+            "alt": "Desktop Page Selection",
+            "caption": "Page Selection Interface (Desktop)"
+          }
+        ],
+        "mobile": [
+          {
+            "src": "images/mobile-upload.jpg",
+            "alt": "Mobile Upload Interface",
+            "caption": "PDF Upload (Mobile)"
+          },
+          {
+            "src": "images/mobile-selection.jpg",
+            "alt": "Mobile Page Selection",
+            "caption": "Page Selection (Mobile)"
+          }
+        ]
+      }
+    }
   }
+}

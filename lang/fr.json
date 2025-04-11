@@ -5,14 +5,15 @@
   "contactLink": "Contact",
   "heroTitle": "Bonjour, je suis Abaarour Moad",
   "heroDescription": "Un professionnel créatif passionné par la création de solutions innovantes et la concrétisation d'idées grâce à la technologie et au design.",
-  "project1Title": "Projet 1",
-  "project1Description": "Description du projet 1",
+  "project1Title": "MECL",
   "project1Details": "Description détaillée du Projet 1, incluant les technologies utilisées, les défis surmontés et les réalisations clés.",
-  "project2Title": "Projet 2",
-  "project2Description": "Description du projet 2",
+
+  "project2Title": "Friandos",
   "project2Details": "Description détaillée du Projet 2, mettant en valeur l'approche innovante et l'impact du projet.",
+
   "project3Title": "SliceMyPDF",
-  "project3Description": "SliceMyPDF est une application web conçue pour permettre aux utilisateurs de télécharger des documents PDF et d'extraire des pages ou des plages spécifiques, créant ainsi de nouveaux fichiers PDF ne contenant que le contenu souhaité. Développée avec Python et le framework web Flask, elle offre une interface simple développée avec HTML, CSS et JavaScript. L'application est déployée sur un serveur Ubuntu hébergé sur AWS EC2, garantissant évolutivité et fiabilité.",
+
+  
   "screenshotsLabel": "Captures d'écran de l'application",
   "desktopLabel": "Interface Bureau",
   "mobileLabel": "Expérience Mobile",
@@ -20,6 +21,7 @@
   "desktopSelectionCaption": "Interface de Sélection des Pages (Bureau)",
   "mobileUploadCaption": "Téléchargement de PDF (Mobile)",
   "mobileSelectionCaption": "Sélection des Pages (Mobile)",
+
   "featuresLabel": "Fonctionnalités Clés",
   "techStackLabel": "Stack Technologique",
   "workflowLabel": "Fonctionnement",
@@ -28,10 +30,168 @@
   "conclusionLabel": "Conclusion",
   "githubLabel": "GitHub",
   "websiteLabel": "Site Web",
-  "project1GithubUrl": "https://github.com/yourusername/project1",
-  "project1WebsiteUrl": "https://project1.yourdomain.com",
-  "project2GithubUrl": "https://github.com/yourusername/project2",
-  "project2WebsiteUrl": "https://project2.yourdomain.com",
-  "project3GithubUrl": "https://github.com/ourouchy/SliceMyPDF",
-  "project3WebsiteUrl": "https://slicemypdf.me"
+
+  "projects": {
+    "project1": {
+      "title": "MECL",
+      "description": "Un tableau de bord e-commerce entièrement personnalisable construit avec Vue.js et Laravel. Les clients peuvent gérer les produits, les commandes, les catégories, les clients et les rapports depuis une interface élégante, avec des fonctionnalités dynamiques comme les variantes de produits, le suivi des ventes en temps réel et la gestion du carrousel.",
+      "details": "MECL (Modular Ecommerce Laravel) est une plateforme e-commerce flexible et évolutive conçue pour les entreprises souhaitant un contrôle total sur la gestion de leur boutique.<p><p>Le tableau de bord client, développé avec Vue.js, agit comme un puissant centre de gestion connecté à un backend Laravel (PHP) via une API.<p><p>Le tableau de bord propose les fonctionnalités suivantes :<p>- Produits : Ajouter ou supprimer des produits avec des tailles personnalisables, des catégories optionnelles et des prix dynamiques selon la taille.<p>- Tailles : Le client peut définir et gérer ses propres tailles sans limite.<p>- Catégories : Nombre illimité de catégories imbriquées avec relations parent/enfant.<p>- Commandes : Historique complet des commandes avec mise à jour des statuts en temps réel, envoi automatique d’e-mails aux clients et synchronisation côté frontend.<p>- Clients & Utilisateurs : Les administrateurs peuvent gérer les clients et les accès à la plateforme.<p>- Rapports : Statistiques visuelles des ventes et des inscriptions via des graphiques (quotidien, mensuel, annuel).<p>- Carrousel : Le client peut personnaliser les images du carrousel d’accueil, le texte des boutons et leurs liens.<p><p>Le projet est modulaire et 100% personnalisable, ce qui permet d’ajouter de nouvelles fonctionnalités à la demande. Les prochaines améliorations incluent : gestion des soldes, codes promo et avis sur les produits.",
+      "tech": "Laravel, VueJs, TailwindCSS",
+      
+"screenshots": {
+  "desktop": [
+    {
+      "src": "images/mecl/mecl_dashboard.png",
+      "alt": "Vue générale du tableau de bord administrateur",
+      "caption": "Vue d'ensemble du tableau de bord"
+    },
+    {
+      "src": "images/mecl/mecl_front.png",
+      "alt": "Aperçu du site public",
+      "caption": "Page d’accueil du site public"
+    },
+    {
+      "src": "images/mecl/mecl_products.png",
+      "alt": "Gestion de la liste des produits",
+      "caption": "Vue de gestion des produits"
+    },
+    {
+      "src": "images/mecl/mecl_createP.png",
+      "alt": "Écran de création de produit",
+      "caption": "Création d’un nouveau produit"
+    },
+    {
+      "src": "images/mecl/mecl_categories.png",
+      "alt": "Page de gestion des catégories",
+      "caption": "Gestion des catégories"
+    },
+    {
+      "src": "images/mecl/mecl_carrousel.png",
+      "alt": "Interface d’édition du carrousel",
+      "caption": "Gestion du carrousel d’accueil"
+    },
+    {
+      "src": "images/mecl/mecl_customers.png",
+      "alt": "Liste des clients",
+      "caption": "Gestion des clients"
+    },
+    {
+      "src": "images/mecl/mecl_orders.png",
+      "alt": "Commandes et suivi",
+      "caption": "Suivi des commandes"
+    },
+    {
+      "src": "images/mecl/mecl_users.png",
+      "alt": "Permissions et rôles utilisateur",
+      "caption": "Rôles et permissions"
+    },
+    {
+      "src": "images/mecl/mecl_reports.png",
+      "alt": "Rapports de ventes et d'activité",
+      "caption": "Rapports & statistiques"
+    },
+    {
+      "src": "images/mecl/mecl-stripe.png",
+      "alt": "Interface de paiement Stripe",
+      "caption": "Paiement"
+    }
+  ]
+}
+    },
+
+    "project2": {
+      "title": "Friandos",
+      "description": "Une plateforme e-commerce personnalisée construite à partir du kit de démarrage MECL, avec une vitrine client dynamique intégrant filtres produits, réductions, avis clients et tarification basée sur la taille. Conçue pour démontrer une utilisation réelle en production.",
+      "details": "Friandos est une démonstration commerciale de mon framework e-commerce personnalisé, MECL (Modular Ecommerce Laravel), adaptée pour montrer un cas d'usage concret.<p><p>Basé sur MECL, Friandos étend le starter kit original avec une boutique client complète, des filtres avancés, un système de réductions et d'avis produits — le tout relié à un backend Vue.js + Laravel.<p><p>La plateforme propose :<p>- Présentation des Produits : Les clients peuvent parcourir un catalogue responsive avec plages de prix dynamiques (tailles et réductions incluses).<p>- Filtres Avancés : Par taille, marque, gamme de prix et disponibilité.<p>- Réductions : Gestion en temps réel des promotions avec pourcentages de réduction et prix barrés.<p>- Système d'Avis : Les utilisateurs authentifiés peuvent laisser une note et un commentaire sur les produits.<p>- Frontend Responsive : Interface client personnalisée avec Tailwind CSS et Alpine.js.<p>- Panier et Commande : Ajout au panier (avec ou sans variantes de taille) et passage de commande (invité ou connecté).<p>- Dashboard Admin : Gestion des produits, tailles, réductions, catégories, marques, utilisateurs, commandes et statistiques.<p><p>Le projet est hébergé sur un VPS OVH (serveur Ubuntu) et conçu pour être évolutif avec des fonctionnalités futures telles que les codes promo et les listes de souhaits.<p><p>Friandos est une preuve de concept complète démontrant ma capacité à construire et déployer une solution e-commerce de bout en bout.",
+      "tech": "Laravel, VueJs, AlpineJs, TailwindCSS",
+      
+      "websiteUrl": "https://friandos.fr",
+      "screenshots": {
+          "desktop": [
+            {
+              "src": "images/friandos/fdekstop-brands.png",
+              "alt": "Gestion des marques",
+              "caption": "Gestion des marques"
+            },
+            {
+              "src": "images/friandos/fdekstop-categories.png",
+              "alt": "Gestion des catégories",
+              "caption": "Gestion des catégories"
+            },
+            {
+              "src": "images/friandos/fdesktop-products.png",
+              "alt": "Gestion des produits",
+              "caption": "Gestion des produits"
+            },
+            {
+              "src": "images/friandos/fdesktop-reports.png",
+              "alt": "Vue d'ensemble des rapports",
+              "caption": "Vue d'ensemble des rapports"
+            },
+            {
+              "src": "images/friandos/fdesktop-cart.png",
+              "alt": "Panier en tant qu'invité",
+              "caption": "Panier en tant qu'invité"
+            },
+            {
+              "src": "images/friandos/fdesktop-checkout.png",
+              "alt": "Passage de commande invité",
+              "caption": "Passage de commande invité"
+            },
+            {
+              "src": "images/friandos/fdesktop-order.png",
+              "alt": "Détails de la commande",
+              "caption": "Détails de la commande dans le tableau de bord"
+            },
+            {
+              "src": "images/friandos/fdesktop-carrousel.png",
+              "alt": "Gestion du carrousel",
+              "caption": "Gestion du carrousel"
+            },
+            {
+              "src": "images/friandos/fdekstop-succesfull.png",
+              "alt": "Page de commande réussie",
+              "caption": "Page de commande réussie"
+            }
+          ]
+        }
+      
+    },
+
+    "project3": {
+      "title": "SliceMyPDF",
+      "description": "SliceMyPDF est une application web conçue pour permettre aux utilisateurs de télécharger des documents PDF et d'extraire des pages ou des plages spécifiques, créant ainsi de nouveaux fichiers PDF ne contenant que le contenu souhaité. Développée avec Python et le framework web Flask, elle offre une interface simple développée avec HTML, CSS et JavaScript. L'application est déployée sur un serveur Ubuntu hébergé sur AWS EC2, garantissant évolutivité et fiabilité.",
+      "details": "",
+      "tech": "",
+      "githubUrl": "https://github.com/ourouchy/SliceMyPDF",
+      "websiteUrl": "https://slicemypdf.me",
+      
+      "screenshots": {
+        "desktop": [
+          {
+            "src": "images/desktop-upload.jpg",
+            "alt": "Interface de Téléversement (Bureau)",
+            "caption": "Téléchargement et Aperçu du PDF (Bureau)"
+          },
+          {
+            "src": "images/desktop-selection.jpg",
+            "alt": "Interface de Sélection des Pages (Bureau)",
+            "caption": "Interface de Sélection des Pages (Bureau)"
+          }
+        ],
+        "mobile": [
+          {
+            "src": "images/mobile-upload.jpg",
+            "alt": "Interface de Téléversement (Mobile)",
+            "caption": "Téléchargement de PDF (Mobile)"
+          },
+          {
+            "src": "images/mobile-selection.jpg",
+            "alt": "Interface de Sélection des Pages (Mobile)",
+            "caption": "Sélection des Pages (Mobile)"
+          }
+        ]
+      }
+    }
+  }
 }

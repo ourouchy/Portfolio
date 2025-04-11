@@ -1,10 +1,11 @@
 :root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --background-color: #f8f9fa;
-  --text-color: #343a40;
-  --accent-color: #17a2b8;
-  --light-color: #f1f3f5;
+  --primary-color: #4a6fa5;
+  --secondary-color: #798897;
+  --background-color: #222831;
+  --text-color: #e8e8e8;
+  --accent-color: #5a8db8;
+  --light-color: #333f4d;
+  --card-background: #2d343f;
   --transition-speed: 0.3s;
 }
 
@@ -15,7 +16,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'SF Pro Display', 'Roboto', system-ui, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -25,7 +26,7 @@ body {
 .language-selector {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   z-index: 100;
 }
 
@@ -33,7 +34,8 @@ body {
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid var(--secondary-color);
-  background-color: white;
+  background-color: var(--card-background);
+  color: var(--text-color);
   cursor: pointer;
 }
 
@@ -42,8 +44,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-background);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 10;
 }
@@ -52,11 +54,62 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary-color);
+  margin-left: 5rem; /* Add space for language selector */
+}
+
+.project-title-and-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.project-links {
+  display: flex;
+  gap: 16px; /* space between icons */
+  margin: 1rem 0;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.project-links a:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transform: scale(1.1);
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
+}
+
+.project-links .private-repo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  color: var(--secondary-color);
+  cursor: default;
+  transition: transform 0.2s;
+}
+
+.project-links .private-repo:hover {
+  transform: scale(1.05);
+  color: var(--text-color);
 }
 
 .nav-links a {
@@ -65,6 +118,7 @@ header {
   font-weight: 500;
   transition: color var(--transition-speed);
   cursor: pointer;
+  letter-spacing: 0.5px;
 }
 
 .nav-links a:hover,
@@ -104,12 +158,14 @@ header {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
 .hero p {
   font-size: 1.2rem;
   max-width: 600px;
   color: var(--secondary-color);
+  line-height: 1.8;
 }
 
 .projects-grid {
@@ -120,17 +176,19 @@ header {
 }
 
 .project-card {
-  background-color: white;
+  background-color: var(--card-background);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .project-card.inactive {
@@ -143,13 +201,14 @@ header {
 }
 
 .project-details {
-  background-color: white;
+  background-color: var(--card-background);
   border-radius: 8px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity var(--transition-speed), transform var(--transition-speed);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-details.active {
@@ -160,6 +219,7 @@ header {
 .project-details h2 {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 .project-content {
@@ -193,8 +253,15 @@ header {
   gap: 1rem;
 }
 
+.screenshots-container.single-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .screenshot-group h4 {
   margin-bottom: 0.5rem;
+  color: var(--accent-color);
 }
 
 .desktop-screenshots,
@@ -214,6 +281,7 @@ header {
   border-radius: 4px;
   cursor: pointer;
   transition: transform var(--transition-speed);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .screenshot-img:hover {
@@ -235,9 +303,9 @@ header {
   position: absolute;
   top: 60px;
   right: 2rem;
-  background-color: white;
+  background-color: var(--card-background);
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -246,6 +314,7 @@ header {
   transform: translateY(-10px);
   transition: opacity var(--transition-speed), transform var(--transition-speed);
   z-index: 100;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .contact-dropdown.visible {
@@ -271,9 +340,9 @@ header {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: var(--card-background);
   padding: 0.8rem;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   justify-content: space-around;
   z-index: 100;
 }
@@ -310,8 +379,13 @@ header {
   }
   
   .language-selector {
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 1rem;
+    left: 1rem;
+  }
+  
+  .logo {
+    margin-left: 0;
+    font-size: 1.3rem;
   }
   
   .content-section {
@@ -329,5 +403,30 @@ header {
   
   .screenshots-container {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+  
+  .language-selector {
+    top: 0.7rem;
+    left: 0.7rem;
+  }
+  
+  #languageSelector {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+  
+  .project-card {
+    padding: 1.2rem;
   }
 }
