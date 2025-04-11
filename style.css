@@ -169,13 +169,21 @@ header {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory; /* optionnel pour un effet "snap" */
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 }
-
+.projects-grid::-webkit-scrollbar {
+  display: none;
+}
 .project-card {
+  flex: 0 0 auto; /* IMPORTANT : ne pas shrink, garder taille fixe */
+  width: 250px; /* ou ajuste la largeur comme tu veux */
+  scroll-snap-align: start; /* optionnel pour effet "snap" */
   background-color: var(--card-background);
   border-radius: 8px;
   padding: 1.5rem;
@@ -300,8 +308,8 @@ header {
 }
 
 .contact-dropdown {
-  position: absolute;
-  top: 60px;
+  position: fixed;
+  top: 80px; /* a bit lower for desktop nav */
   right: 2rem;
   background-color: var(--card-background);
   border-radius: 8px;
@@ -313,7 +321,7 @@ header {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity var(--transition-speed), transform var(--transition-speed);
-  z-index: 100;
+  z-index: 200; /* make sure it is above everything */
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -625,4 +633,60 @@ header {
 
 .cta-button:hover i {
   transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  /* ... ton autre code déjà présent ... */
+
+  .split-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .split-left, .split-right {
+    padding: 1rem;
+  }
+
+  .split-left {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .split-right {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .language-selector {
+    top: 1rem;
+    right: 1rem;
+    left: auto; 
+  }
+  .contact-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    top: auto;
+    bottom: 70px; /* above mobile nav bar */
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  .contact-dropdown a {
+    white-space: nowrap; /* prevent text from wrapping weirdly */
+    overflow: hidden;
+    text-overflow: ellipsis; /* optional: add "..." if text is too long */
+    width: 100%;
+    text-align: center;
+    font-size: 1rem; /* or smaller if needed */
+  }
+}
+
+
+.contact-dropdown a:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
