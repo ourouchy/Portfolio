@@ -3,10 +3,16 @@
   "homeLink": "Home",
   "projectsLink": "Projects",
   "contactLink": "Contact",
-  "heroTitle": "Hi, I'm Abaarour Moad",
-  "heroDescription": "A creative professional passionate about...",
-
-
+  "heroTitle": "Moad Abaarour",
+  "heroDescription": "Developer specialized in designing and optimizing web applications. I combine technical expertise with an architectural mindset to deliver reliable, scalable solutions.",
+  "heroSubtitle": "Full Stack Developer",
+  "professionalStatement": "With extensive full-stack experience and a strong interest in AI, I translate business requirements into high-performance, long-lasting software.",
+  "approachStatement": "I’m currently transitioning from Vue.js to React, in line with Laravel’s evolving ecosystem, to deliver more scalable and maintainable applications.",
+  "techStack.title": "Tech Stack",
+  "techStack.categories.backend": "Backend",
+  "techStack.categories.frontend": "Frontend",
+  "techStack.categories.cloud": "Cloud & Deployment",
+  "techStack.categories.other": "Other",
    
   "project1Title": "MECL",
   "project1Description": "Description of project 1",
@@ -15,13 +21,11 @@
 
 
   "project2Title": "Friandos",
-  "project2Description": "Description of project 2",
-  "project2Details": "In-depth overview of Project 2, highlighting the innovative approach and overall project impact.",
 
 
 
   "project3Title": "SliceMyPDF",
-  "project3Description": "SliceMyPDF is a web application designed to enable users to upload PDF documents and extract specific pages or ranges, creating new PDF files containing only the desired content. Built using Python and the Flask web framework, it offers a straightforward interface developed with HTML, CSS, and JavaScript. The application is deployed on an Ubuntu server hosted on AWS EC2, ensuring scalability and reliability.",
+
 
   "screenshotsLabel": "Application Screenshots",
   "desktopLabel": "Desktop Interface",
@@ -163,8 +167,7 @@
 
     "project3": {
       "title": "SliceMyPDF",
-      "description": "SliceMyPDF is a web application designed to enable users to upload PDF documents and extract specific pages or ranges, creating new PDF files containing only the desired content. Built using Python and the Flask web framework, it offers a straightforward interface developed with HTML, CSS, and JavaScript. The application is deployed on an Ubuntu server hosted on AWS EC2, ensuring scalability and reliability.​",
-      "details": "More detailed explanation about how SliceMyPDF works...",
+      "description": "SliceMyPDF is a web application designed to enable users to upload PDF documents and extract specific pages or ranges, creating new PDF files containing only the desired content. Built using Python and the Flask web framework, it offers a straightforward interface developed with HTML, CSS, and JavaScript. The application is deployed on an Ubuntu server hosted on AWS EC2.​",
       "tech": "Python, Flask, HTML, CSS, JavaScript",
       "githubUrl": "https://github.com/ourouchy/SliceMyPDF",
       "websiteUrl": "https://slicemypdf.me",

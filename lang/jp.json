@@ -4,15 +4,24 @@
   "projectsLink": "プロジェクト",
   "contactLink": "連絡先",
   "heroTitle": "こんにちは、アバアルール・モアドです",
-  "heroDescription": "革新的なソリューションを創造し、技術とデザインを通じてアイデアを形にすることに情熱を注ぐクリエイティブなプロフェッショナルです。",
+  "heroDescription": "ウェブアプリケーションの設計と最適化を専門とする開発者。技術的専門知識とアーキテクチャ的思考を組み合わせ、信頼性が高くスケーラブルなソリューションを提供します。",
+  "heroSubtitle": "フルスタック開発者",
+  "professionalStatement": "豊富なフルスタック開発経験とAIへの強い関心を持ち、ビジネス要件を高性能で長期的なソフトウェアに変換します。",
+  "approachStatement": "現在、Vue.jsからReactへの移行を進めており、Laravelの進化するエコシステムに沿って、よりスケーラブルでメンテナンス性の高いアプリケーションを構築しています。",
+  "techStack.title": "使用技術",
+  "techStack.categories.backend": "バックエンド",
+  "techStack.categories.frontend": "フロントエンド",
+  "techStack.categories.cloud": "クラウド & デプロイ",
+  "techStack.categories.other": "その他",
+
+
   "project1Title": "MECL",
 
   "project2Title": "Friandos",
 
   
   "project3Title": "SliceMyPDF",
-  "project3Description": "SliceMyPDFは、ユーザーがPDFドキュメントをアップロードし、特定のページや範囲を抽出して、必要なコンテンツのみを含む新しいPDFファイルを作成できるようにするWebアプリケーションです。PythonとFlask Webフレームワークを使用して構築され、HTML、CSS、JavaScriptで開発された直感的なインターフェースを提供します。このアプリケーションはAWS EC2でホストされたUbuntuサーバーにデプロイされており、拡張性と信頼性を確保しています。",
-  
+
   "screenshotsLabel": "アプリケーションのスクリーンショット",
   "desktopLabel": "デスクトップインターフェース",
   "mobileLabel": "モバイル体験",

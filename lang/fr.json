@@ -3,13 +3,26 @@
   "homeLink": "Accueil",
   "projectsLink": "Projets",
   "contactLink": "Contact",
-  "heroTitle": "Bonjour, je suis Abaarour Moad",
-  "heroDescription": "Un professionnel créatif passionné par la création de solutions innovantes et la concrétisation d'idées grâce à la technologie et au design.",
+  "heroTitle": "Moad Abaarour",
+  "heroDescription": "Développeur spécialisé dans la conception et l'optimisation d'applications web. J’allie expertise technique et sens de l’architecture pour proposer des solutions fiables et évolutives.",
+  "heroSubtitle": "Développeur Full Stack",
+  "professionalStatement": "Fort d’une expérience approfondie en développement full stack et d’un intérêt marqué pour l’IA, je traduis les besoins métiers en logiciels performants et pérennes.",
+  "approachStatement": "Je migre actuellement de Vue.js à React, en phase avec l’évolution de l’écosystème Laravel, afin de proposer des applications plus évolutives et faciles à maintenir.",
+  "techStack.title": "Technologie",
+  "techStack.categories.backend": "Backend",
+  "techStack.categories.frontend": "Frontend",
+  "techStack.categories.cloud": "Cloud & Déploiement",
+  "techStack.categories.other": "Autres",
+  
+  "home": {
+    "projectsHighlight": "Du développement backend avec Flask à la création d'interfaces utilisateur réactives, je livre des applications web complètes avec une architecture modulaire prête au déploiement.",
+    "viewProjectsButton": "Voir mes projets"
+  },
+  
   "project1Title": "MECL",
-  "project1Details": "Description détaillée du Projet 1, incluant les technologies utilisées, les défis surmontés et les réalisations clés.",
+
 
   "project2Title": "Friandos",
-  "project2Details": "Description détaillée du Projet 2, mettant en valeur l'approche innovante et l'impact du projet.",
 
   "project3Title": "SliceMyPDF",
 

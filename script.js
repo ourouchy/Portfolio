@@ -9,6 +9,7 @@ async function loadTranslations(lang) {
     
     currentTranslations = await res.json();
     applyTranslations();
+    populateTechTags(currentTranslations); // Ajout de l'appel à la fonction pour les tags technologiques
     document.documentElement.lang = lang;
     localStorage.setItem('preferredLanguage', lang);
     
@@ -41,6 +42,36 @@ function applyTranslations() {
     showProjectDetails(activeProject.dataset.project);
   }
 }
+
+// Nouvelle fonction pour populer les tags technologiques
+function populateTechTags(data) {
+  // Charger les tags pour chaque catégorie
+  const categories = ['backend', 'frontend', 'cloud', 'other'];
+  
+  categories.forEach(category => {
+    const container = document.getElementById(`${category}Tags`);
+    if (container && data.techStack && data.techStack[category] && data.techStack[category].tags) {
+      // Vider le conteneur
+      container.innerHTML = '';
+      
+      // Ajouter chaque tag depuis le JSON
+      data.techStack[category].tags.forEach(tag => {
+        const tagElement = document.createElement('span');
+        tagElement.className = 'tech-tag';
+        tagElement.textContent = tag;
+        container.appendChild(tagElement);
+      });
+    }
+  });
+  
+  // Mettre à jour le texte du bouton CTA
+  const viewProjectsBtn = document.getElementById('view-projects-btn');
+  if (viewProjectsBtn && data.home && data.home.viewProjectsButton) {
+    // Conserver l'icône flèche
+    viewProjectsBtn.innerHTML = `${data.home.viewProjectsButton} <i class="fas fa-arrow-right"></i>`;
+  }
+}
+
 function renderProjectDetails(projectId) {
   const project = currentTranslations.projects?.[projectId];
   const detailsContainer = document.getElementById('projectDetails');
@@ -449,6 +480,11 @@ function initEventListeners() {
     card.addEventListener('click', () => {
       showProjectDetails(card.dataset.project);
     });
+  });
+
+  // "Voir mes projets" button
+  document.getElementById('view-projects-btn').addEventListener('click', () => {
+    switchContent('projectsSection');
   });
 
   // Handle keyboard navigation
