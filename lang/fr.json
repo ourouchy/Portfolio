@@ -25,6 +25,7 @@
   "project2Title": "Friandos",
 
   "project3Title": "SliceMyPDF",
+  "project4Title": "Infoweb France",
 
   
   "screenshotsLabel": "Captures d'écran de l'application",
@@ -205,6 +206,40 @@
           }
         ]
       }
+    },
+    
+    "project4": {
+        "title": "InfoWeb France",
+        "description": "Un site vitrine professionnel pour une école de formation tech, conçu pour explorer l'écosystème React et préparer une transition de Vue vers React, en cohérence avec l'évolution des stacks Laravel modernes.",
+        "details": "InfoWeb France est un projet personnel servant de mise en main de React avec Vite, Tailwind CSS et TypeScript. Ce site présente des formations diplômantes (titres RNCP) et non certifiantes dans des domaines variés : développement web, data science, UX/UI design, cybersécurité, etc.<p><p>Le site met en avant :<p>- Une page d’accueil engageante avec section héro, CTA, et témoignages.<p>- Un système de filtrage dynamique des formations par thème, niveau ou mot-clé.<p>- Des pages de formation individuelles détaillées avec objectifs, compétences, débouchés et prérequis.<p>- Un système de témoignages interactifs et un carrousel personnalisable.<p>- Une page contact simple, avec formulaire et liens directs vers les financements.<p><p>Ce projet m’a permis de pratiquer des concepts clés comme le routing avec React Router, l’architecture modulaire de composants, les animations et transitions avec Tailwind CSS, et le déploiement sur GitHub Pages avec support du client-side routing.",
+        "tech": "React, Vite, TailwindCSS, TypeScript, React Router, Radix UI",
+        "websiteUrl": "https://ourouchy.github.io/infowebfrance",
+        "githubUrl": "https://github.com/ourouchy/infowebfrance.git",
+        "screenshots": {
+          "desktop": [
+            {
+              "src": "images/infowebfrance/desktop-info-hero.png",
+              "alt": "acceuil",
+              "caption": "Page d'acceuil"
+            },
+            {
+              "src": "images/infowebfrance/desktop-info-formation.png",
+              "alt": "formation x",
+              "caption": "Page de formation"
+            },
+            {
+              "src": "images/infowebfrance/desktop-info-plans.png",
+              "alt": "prix",
+              "caption": "Apérçu des prix par formation"
+            },
+            {
+              "src": "images/infowebfrance/desktop-info-contact.png",
+              "alt": "contact",
+              "caption": "Page de Contact"
+            }
+          ]
+        }
     }
+    
   }
 }

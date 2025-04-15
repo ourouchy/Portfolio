@@ -21,6 +21,7 @@
 
   
   "project3Title": "SliceMyPDF",
+  "project4Title": "Infoweb France",
 
   "screenshotsLabel": "アプリケーションのスクリーンショット",
   "desktopLabel": "デスクトップインターフェース",
@@ -196,6 +197,39 @@
             "src": "images/mobile-selection.jpg",
             "alt": "モバイルページ選択インターフェース",
             "caption": "ページ選択（モバイル）"
+          }
+        ]
+      }
+    },
+    
+    "project4": {
+      "title": "InfoWeb France",
+      "description": "技術トレーニングスクールのプロフェッショナルなランディングサイト。Reactエコシステムの探索とVueからReactへの移行を目的として構築され、現代のLaravelスタックのトレンドに沿っています。",
+      "details": "InfoWeb Franceは、Vite、Tailwind CSS、TypeScriptを使用してReactの実践的な経験を積むための個人プロジェクトです。このサイトは、ウェブ開発、データサイエンス、UX/UIデザイン、サイバーセキュリティなどの分野における認定（RNCPタイトル）および非認定トレーニングプログラムを紹介しています。<p><p>ウェブサイトの特徴:<p>- ヒーローセクション、CTA、 testimonialを含む魅力的なホームページ<p>- トピック、レベル、またはキーワードでコースを閲覧できる動的フィルタリングシステム<p>- 目標、スキル、キャリアパス、前提条件を記載した個別のコースページ<p>- インタラクティブなtestimonialセクションとカスタマイズ可能なカルーセル<p>- フォームと直接の資金調達リンクを備えたシンプルなコンタクトページ<p><p>このプロジェクトでは、React Routerを使ったクライアントサイドルーティング、モジュール式コンポーネントアーキテクチャ、Tailwind CSSを使用したトランジションとアニメーション、GitHub Pagesでの完全なSPAサポートを含むデプロイなど、主要な概念を実践することができました。",
+      "tech": "React, Vite, TailwindCSS, TypeScript, React Router, Radix UI",
+      "websiteUrl": "https://ourouchy.github.io/infowebfrance",
+      "githubUrl": "https://github.com/ourouchy/infowebfrance.git",
+      "screenshots": {
+        "desktop": [
+          {
+            "src": "images/infowebfrance/desktop-info-hero.png",
+            "alt": "ホーム",
+            "caption": "ホームページ"
+          },
+          {
+            "src": "images/infowebfrance/desktop-info-formation.png",
+            "alt": "コース",
+            "caption": "コース詳細ページ"
+          },
+          {
+            "src": "images/infowebfrance/desktop-info-plans.png",
+            "alt": "価格",
+            "caption": "価格概要"
+          },
+          {
+            "src": "images/infowebfrance/desktop-info-contact.png",
+            "alt": "コンタクト",
+            "caption": "コンタクトページ"
           }
         ]
       }

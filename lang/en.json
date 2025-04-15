@@ -25,6 +25,7 @@
 
 
   "project3Title": "SliceMyPDF",
+  "project4Title": "Infoweb France",
 
 
   "screenshotsLabel": "Application Screenshots",
@@ -198,6 +199,38 @@
           }
         ]
       }
-    }
+    },
+    "project4": {
+  "title": "InfoWeb France",
+  "description": "A professional landing site for a tech training school, built to explore the React ecosystem and transition from Vue to React, in line with modern Laravel stack trends.",
+  "details": "InfoWeb France is a personal project aimed at getting hands-on experience with React using Vite, Tailwind CSS, and TypeScript. The site showcases both certified (RNCP titles) and non-certified training programs across various fields such as web development, data science, UX/UI design, and cybersecurity.<p><p>The website features:<p>- An engaging homepage with hero section, CTA, and testimonials.<p>- A dynamic filtering system to browse courses by topic, level, or keyword.<p>- Individual course pages with goals, skills, career paths, and prerequisites.<p>- An interactive testimonial section and a customizable carousel.<p>- A simple contact page with a form and direct financing links.<p><p>This project allowed me to practice key concepts such as client-side routing with React Router, modular component architecture, transitions and animations using Tailwind CSS, and deployment on GitHub Pages with full SPA support.",
+  "tech": "React, Vite, TailwindCSS, TypeScript, React Router, Radix UI",
+  "websiteUrl": "https://ourouchy.github.io/infowebfrance",
+  "githubUrl": "https://github.com/ourouchy/infowebfrance.git",
+  "screenshots": {
+    "desktop": [
+      {
+        "src": "images/infowebfrance/desktop-info-hero.png",
+        "alt": "home",
+        "caption": "Homepage"
+      },
+      {
+        "src": "images/infowebfrance/desktop-info-formation.png",
+        "alt": "course",
+        "caption": "Course detail page"
+      },
+      {
+        "src": "images/infowebfrance/desktop-info-plans.png",
+        "alt": "pricing",
+        "caption": "Pricing overview"
+      },
+      {
+        "src": "images/infowebfrance/desktop-info-contact.png",
+        "alt": "contact",
+        "caption": "Contact page"
+      }
+    ]
+  }
+}
   }
 }
