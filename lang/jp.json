@@ -22,6 +22,7 @@
   
   "project3Title": "SliceMyPDF",
   "project4Title": "Infoweb France",
+  "project5Title": "Polyglow",
 
   "screenshotsLabel": "アプリケーションのスクリーンショット",
   "desktopLabel": "デスクトップインターフェース",
@@ -232,6 +233,83 @@
             "caption": "コンタクトページ"
           }
         ]
+      }
+    },
+    {
+      "project5": {
+        "title": "Polyglow (開発中)",
+        "description": "言語学習者と講師をつなぐスケーラブルなウェブプラットフォーム。プログレッシブエンハンスメントを考慮したフルスタックMVPとして構築。3つのユーザーロールに対応した予約、支払い、多言語対応のオンボーディング機能を備えています。",
+        "details": "Polyglowは現在開発中の言語指導プラットフォームで、生徒、講師、管理者間のシームレスなやり取りを可能にします。<p><p>初期リリースでは、ユーザーオンボーディング、予約管理、ウォレット統合、ユーザーロールごとのスケーラブルなレイアウトといった基本機能に焦点を当てています。構造化されたMVPファーストアプローチを採用し、今後の機能拡張（モバイル版、AIを活用した講師マッチング、認証ワークフローなど）の明確な計画があります。<p><p>実装済みの主な機能:<p>- 認証システム: httpOnlyクッキーを使用したJWTセッションによるメールベースのログイン<p>- 講師向け多段階登録: 動画アップロード、言語能力設定、空き時間設定、プロファイル完成までの5段階オンボーディング<p>- 生徒ダッシュボード: リアルタイム予約アシスタント、カレンダービュー（月/週/日）、Stripeによる支払い<p>- 講師ダッシュボード: コース作成、空き時間管理、生徒統計、収益追跡<p>- ウォレットシステム: 各ユーザー専用ウォレット、Stripe完全統合、取引履歴<p>- 管理者インターフェース: 講師申請承認システムを備えた基本管理者ダッシュボード<p>- ロールベースレイアウト: React Routerで構築されたモジュール式UI、各ロールに特化した永続的レイアウト<p><p>プラットフォームはPostgreSQL + Django RESTバックエンドで動作し、フロントエンドはReact + Tailwindを使用。予約システムにはカレンダーベースの選択、ウォレット残高確認、レッスン確定前の支払い確認が統合されています。",
+        "tech": "React, TypeScript, TailwindCSS, Django, PostgreSQL, Stripe",
+        "screenshots": {
+          "desktop": [
+            {
+              "src": "images/polyglow/public.png",
+              "alt": "公開ランディングページ",
+              "caption": "動的CTA付き公開ランディングページ"
+            },
+            {
+              "src": "images/polyglow/auth.png",
+              "alt": "認証フロー",
+              "caption": "ログインとセキュリティ"
+            },
+            {
+              "src": "images/polyglow/dashetud.png",
+              "alt": "生徒ダッシュボード",
+              "caption": "生徒ダッシュボード"
+            },
+            {
+              "src": "images/polyglow/booking.png",
+              "alt": "予約ウィザード",
+              "caption": "ステップバイステップ予約プロセス"
+            },
+            {
+              "src": "images/polyglow/payment.png",
+              "alt": "ウォレットと支払い",
+              "caption": "取引履歴付きStripe対応ウォレット"
+            },
+            {
+              "src": "images/polyglow/dashens.png",
+              "alt": "講師ダッシュボード",
+              "caption": "講師ダッシュボード"
+            },
+            {
+              "src": "images/polyglow/course.png",
+              "alt": "コース管理",
+              "caption": "言語コースと空き時間の作成・管理"
+            },
+            {
+              "src": "images/polyglow/diflng.png",
+              "alt": "言語能力設定",
+              "caption": "国際化対応"
+            },
+            {
+              "src": "images/polyglow/dashadm.png",
+              "alt": "管理者ダッシュボード",
+              "caption": "管理者ダッシュボード"
+            },
+            {
+              "src": "images/polyglow/admin.png",
+              "alt": "管理者ユーザー一覧",
+              "caption": "フィルターと操作機能付き管理者ユーザーリスト"
+            },
+            {
+              "src": "images/polyglow/dm.png",
+              "alt": "メッセージシステム",
+              "caption": "リアルタイムメッセージシステム"
+            },
+            {
+              "src": "images/polyglow/tests.png",
+              "alt": "テストカバレッジ",
+              "caption": "フロントエンドとバックエンドの単体テストとカバレッジ結果"
+            },
+            {
+              "src": "images/polyglow/toasts.png",
+              "alt": "トースト通知",
+              "caption": "インタラクティブなフィードバックとエラーハンドリング"
+            }
+          ]
+        }
       }
     }
   }

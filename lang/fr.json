@@ -4,10 +4,10 @@
   "projectsLink": "Projets",
   "contactLink": "Contact",
   "heroTitle": "Moad Abaarour",
-  "heroDescription": "Développeur spécialisé dans la conception et l'optimisation d'applications web. J’allie expertise technique et sens de l’architecture pour proposer des solutions fiables et évolutives.",
+  "heroDescription": "Développeur spécialisé dans la conception et l'optimisation d'applications web. J'allie expertise technique et sens de l'architecture pour proposer des solutions fiables et évolutives.",
   "heroSubtitle": "Développeur Full Stack",
-  "professionalStatement": "Fort d’une expérience approfondie en développement full stack et d’un intérêt marqué pour l’IA, je traduis les besoins métiers en logiciels performants et pérennes.",
-  "approachStatement": "Je migre actuellement de Vue.js à React, en phase avec l’évolution de l’écosystème Laravel, afin de proposer des applications plus évolutives et faciles à maintenir.",
+  "professionalStatement": "Fort d'une expérience approfondie en développement full stack et d'un intérêt marqué pour l'IA, je traduis les besoins métiers en logiciels performants et pérennes.",
+  "approachStatement": "Je migre actuellement de Vue.js à React, en phase avec l'évolution de l'écosystème Laravel, afin de proposer des applications plus évolutives et faciles à maintenir.",
   "techStack.title": "Technologie",
   "techStack.categories.backend": "Backend",
   "techStack.categories.frontend": "Frontend",
@@ -26,6 +26,7 @@
 
   "project3Title": "SliceMyPDF",
   "project4Title": "Infoweb France",
+  "project5Title": "Polyglow",
 
   
   "screenshotsLabel": "Captures d'écran de l'application",
@@ -49,7 +50,7 @@
     "project1": {
       "title": "MECL",
       "description": "Un tableau de bord e-commerce entièrement personnalisable construit avec Vue.js et Laravel. Les clients peuvent gérer les produits, les commandes, les catégories, les clients et les rapports depuis une interface élégante, avec des fonctionnalités dynamiques comme les variantes de produits, le suivi des ventes en temps réel et la gestion du carrousel.",
-      "details": "MECL (Modular Ecommerce Laravel) est une plateforme e-commerce flexible et évolutive conçue pour les entreprises souhaitant un contrôle total sur la gestion de leur boutique.<p><p>Le tableau de bord client, développé avec Vue.js, agit comme un puissant centre de gestion connecté à un backend Laravel (PHP) via une API.<p><p>Le tableau de bord propose les fonctionnalités suivantes :<p>- Produits : Ajouter ou supprimer des produits avec des tailles personnalisables, des catégories optionnelles et des prix dynamiques selon la taille.<p>- Tailles : Le client peut définir et gérer ses propres tailles sans limite.<p>- Catégories : Nombre illimité de catégories imbriquées avec relations parent/enfant.<p>- Commandes : Historique complet des commandes avec mise à jour des statuts en temps réel, envoi automatique d’e-mails aux clients et synchronisation côté frontend.<p>- Clients & Utilisateurs : Les administrateurs peuvent gérer les clients et les accès à la plateforme.<p>- Rapports : Statistiques visuelles des ventes et des inscriptions via des graphiques (quotidien, mensuel, annuel).<p>- Carrousel : Le client peut personnaliser les images du carrousel d’accueil, le texte des boutons et leurs liens.<p><p>Le projet est modulaire et 100% personnalisable, ce qui permet d’ajouter de nouvelles fonctionnalités à la demande. Les prochaines améliorations incluent : gestion des soldes, codes promo et avis sur les produits.",
+      "details": "MECL (Modular Ecommerce Laravel) est une plateforme e-commerce flexible et évolutive conçue pour les entreprises souhaitant un contrôle total sur la gestion de leur boutique.<p><p>Le tableau de bord client, développé avec Vue.js, agit comme un puissant centre de gestion connecté à un backend Laravel (PHP) via une API.<p><p>Le tableau de bord propose les fonctionnalités suivantes :<p>- Produits : Ajouter ou supprimer des produits avec des tailles personnalisables, des catégories optionnelles et des prix dynamiques selon la taille.<p>- Tailles : Le client peut définir et gérer ses propres tailles sans limite.<p>- Catégories : Nombre illimité de catégories imbriquées avec relations parent/enfant.<p>- Commandes : Historique complet des commandes avec mise à jour des statuts en temps réel, envoi automatique d'e-mails aux clients et synchronisation côté frontend.<p>- Clients & Utilisateurs : Les administrateurs peuvent gérer les clients et les accès à la plateforme.<p>- Rapports : Statistiques visuelles des ventes et des inscriptions via des graphiques (quotidien, mensuel, annuel).<p>- Carrousel : Le client peut personnaliser les images du carrousel d'accueil, le texte des boutons et leurs liens.<p><p>Le projet est modulaire et 100% personnalisable, ce qui permet d'ajouter de nouvelles fonctionnalités à la demande. Les prochaines améliorations incluent : gestion des soldes, codes promo et avis sur les produits.",
       "tech": "Laravel, VueJs, TailwindCSS",
       
 "screenshots": {
@@ -62,7 +63,7 @@
     {
       "src": "images/mecl/mecl_front.png",
       "alt": "Aperçu du site public",
-      "caption": "Page d’accueil du site public"
+      "caption": "Page d'accueil du site public"
     },
     {
       "src": "images/mecl/mecl_products.png",
@@ -72,7 +73,7 @@
     {
       "src": "images/mecl/mecl_createP.png",
       "alt": "Écran de création de produit",
-      "caption": "Création d’un nouveau produit"
+      "caption": "Création d'un nouveau produit"
     },
     {
       "src": "images/mecl/mecl_categories.png",
@@ -81,8 +82,8 @@
     },
     {
       "src": "images/mecl/mecl_carrousel.png",
-      "alt": "Interface d’édition du carrousel",
-      "caption": "Gestion du carrousel d’accueil"
+      "alt": "Interface d'édition du carrousel",
+      "caption": "Gestion du carrousel d'accueil"
     },
     {
       "src": "images/mecl/mecl_customers.png",
@@ -211,7 +212,7 @@
     "project4": {
         "title": "InfoWeb France",
         "description": "Un site vitrine professionnel pour une école de formation tech, conçu pour explorer l'écosystème React et préparer une transition de Vue vers React, en cohérence avec l'évolution des stacks Laravel modernes.",
-        "details": "InfoWeb France est un projet personnel servant de mise en main de React avec Vite, Tailwind CSS et TypeScript. Ce site présente des formations diplômantes (titres RNCP) et non certifiantes dans des domaines variés : développement web, data science, UX/UI design, cybersécurité, etc.<p><p>Le site met en avant :<p>- Une page d’accueil engageante avec section héro, CTA, et témoignages.<p>- Un système de filtrage dynamique des formations par thème, niveau ou mot-clé.<p>- Des pages de formation individuelles détaillées avec objectifs, compétences, débouchés et prérequis.<p>- Un système de témoignages interactifs et un carrousel personnalisable.<p>- Une page contact simple, avec formulaire et liens directs vers les financements.<p><p>Ce projet m’a permis de pratiquer des concepts clés comme le routing avec React Router, l’architecture modulaire de composants, les animations et transitions avec Tailwind CSS, et le déploiement sur GitHub Pages avec support du client-side routing.",
+        "details": "InfoWeb France est un projet personnel servant de mise en main de React avec Vite, Tailwind CSS et TypeScript. Ce site présente des formations diplômantes (titres RNCP) et non certifiantes dans des domaines variés : développement web, data science, UX/UI design, cybersécurité, etc.<p><p>Le site met en avant :<p>- Une page d'accueil engageante avec section héro, CTA, et témoignages.<p>- Un système de filtrage dynamique des formations par thème, niveau ou mot-clé.<p>- Des pages de formation individuelles détaillées avec objectifs, compétences, débouchés et prérequis.<p>- Un système de témoignages interactifs et un carrousel personnalisable.<p>- Une page contact simple, avec formulaire et liens directs vers les financements.<p><p>Ce projet m'a permis de pratiquer des concepts clés comme le routing avec React Router, l'architecture modulaire de composants, les animations et transitions avec Tailwind CSS, et le déploiement sur GitHub Pages avec support du client-side routing.",
         "tech": "React, Vite, TailwindCSS, TypeScript, React Router, Radix UI",
         "websiteUrl": "https://ourouchy.github.io/infowebfrance",
         "githubUrl": "https://github.com/ourouchy/infowebfrance.git",
@@ -239,7 +240,82 @@
             }
           ]
         }
-    }
-    
+    },
+    "project5": {
+  "title": "Polyglow (en cours de développement)",
+  "description": "Une plateforme web évolutive de mise en relation entre apprenants et tuteurs de langues, construite comme un MVP full-stack avec une logique d’enrichissement progressif. Pensée pour gérer les réservations, les paiements et l'onboarding multilingue sur trois rôles utilisateurs.",
+  "details": "Polyglow est une plateforme de tutorat linguistique actuellement en développement, conçue pour permettre une interaction fluide entre étudiants, enseignants et administrateurs.<p><p>La première version met l'accent sur les fonctionnalités essentielles telles que l'inscription des utilisateurs, la gestion des réservations, l'intégration d'un portefeuille virtuel et des interfaces adaptées à chaque rôle. Le projet suit une logique MVP structurée, avec une feuille de route claire pour des évolutions futures (version mobile, appariement intelligent avec IA, parcours de certification).<p><p>Fonctionnalités déjà en place :<p>- Système d'authentification : Connexion par e-mail avec tokens JWT sécurisés (cookies httpOnly).<p>- Inscription Enseignant Multi-étapes : 5 étapes avec vidéo de présentation, compétences linguistiques, disponibilités et finalisation du profil.<p>- Tableau de Bord Étudiant : Assistant de réservation, vue calendrier (mois/semaine/jour) et paiement via Stripe.<p>- Tableau de Bord Enseignant : Création de cours, gestion de disponibilité, statistiques étudiants et revenus.<p>- Portefeuille Virtuel : Un wallet par utilisateur, intégré à Stripe, avec historique des transactions.<p>- Interface Admin : Tableau de bord de base avec validation des candidatures enseignants.<p>- Layouts par Rôle : Interfaces modulaires selon le rôle, basées sur React Router et des layouts persistants.<p><p>La plateforme repose sur une API Django REST avec base PostgreSQL côté backend, et un frontend React + Tailwind. Le système de réservation est intégré avec sélection sur calendrier, vérification du solde et confirmation de paiement avant validation finale.",
+  "tech": "React, TypeScript, TailwindCSS, Django, PostgreSQL, Stripe",
+  "screenshots": {
+    "desktop": [
+      {
+        "src": "images/polyglow/public.png",
+        "alt": "Page d'accueil publique",
+        "caption": "Page d'accueil avec CTA dynamiques"
+      },
+      {
+        "src": "images/polyglow/auth.png",
+        "alt": "Connexion",
+        "caption": "Système de connexion et sécurité"
+      },
+      {
+        "src": "images/polyglow/dashetud.png",
+        "alt": "Tableau de bord étudiant",
+        "caption": "Vue d’ensemble étudiant avec réservations"
+      },
+      {
+        "src": "images/polyglow/booking.png",
+        "alt": "Assistant de réservation",
+        "caption": "Réservation étape par étape"
+      },
+      {
+        "src": "images/polyglow/payment.png",
+        "alt": "Portefeuille et paiement",
+        "caption": "Portefeuille avec intégration Stripe"
+      },
+      {
+        "src": "images/polyglow/dashens.png",
+        "alt": "Tableau de bord enseignant",
+        "caption": "Vue enseignant avec statistiques et cours"
+      },
+      {
+        "src": "images/polyglow/course.png",
+        "alt": "Gestion des cours",
+        "caption": "Création de cours et gestion des disponibilités"
+      },
+      {
+        "src": "images/polyglow/diflng.png",
+        "alt": "Compétences linguistiques",
+        "caption": "Support multilingue et internationalisation"
+      },
+      {
+        "src": "images/polyglow/dashadm.png",
+        "alt": "Interface admin",
+        "caption": "Tableau de bord administrateur"
+      },
+      {
+        "src": "images/polyglow/admin.png",
+        "alt": "Gestion des utilisateurs admin",
+        "caption": "Liste utilisateurs avec actions rapides"
+      },
+      {
+        "src": "images/polyglow/dm.png",
+        "alt": "Système de messagerie",
+        "caption": "Messagerie en temps réel"
+      },
+      {
+        "src": "images/polyglow/tests.png",
+        "alt": "Couverture des tests",
+        "caption": "Tests unitaires frontend/backend et couverture"
+      },
+      {
+        "src": "images/polyglow/toasts.png",
+        "alt": "Notifications toast",
+        "caption": "Feedback interactif et gestion des erreurs"
+      }
+    ]
+  }
+}
+
   }
 }
