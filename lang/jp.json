@@ -23,6 +23,13 @@
   "project3Title": "SliceMyPDF",
   "project4Title": "Infoweb France",
   "project5Title": "Polyglow",
+  "other1Title": "SGFS",
+
+  "categoryWeb": "Webアプリケーション",
+  "categoryWebDescription": "フルスタックWebアプリケーション、eコマースプラットフォーム、Webツール",
+  "categoryOther": "その他のプロジェクト",
+  "categoryOtherDescription": "モバイルアプリ、デスクトップアプリケーション、その他のソフトウェアプロジェクト",
+  "backToCategories": "カテゴリーに戻る",
 
   "screenshotsLabel": "アプリケーションのスクリーンショット",
   "desktopLabel": "デスクトップインターフェース",
@@ -310,7 +317,29 @@
             }
           ]
         }
+      },
+    "other1": {
+      "title": "その他プロジェクト1",
+      "description": "このプログラムは、私が初めて挑戦する自動化の試みです。あまり複雑ではないものから始めていますが、良いスタートです。目標は、複数のソーシャルメディアプラットフォーム向けに、何千ものユニークな動画を自動生成することです。",
+      "details": "Pygameプロジェクトを実行し、セッションを録画し、自動でアップロードするBashスクリプトを作成しました。目的？自動化が価値を持つには、最低でも6つのゲームが必要です。現在のところ、以下があります：<p><p>1. <strong>バウンドボール</strong> – Pygameの入門として作成。シンプルですが、スピードやテーマを変えて2〜3バージョンに改良予定。<p>2. <strong>クイズゲーム</strong> – 主力。トリビアAPIから問題を取得し、毎回ランダムなキャラクターで新鮮なUIを提供。<p>&nbsp;&nbsp;&nbsp;&nbsp;◦ 3つのジャンル（一般知識、歴史、ポップカルチャー）と4つの言語に分割可能（同じ内容でも幅広く展開可能）。<p><p><strong>仕組み：</strong><p>• 66秒のセッション（各セッション6問）。<p>• 自動録画（OBS WebSocketsを使ったPythonスクリプト）＋自動アップロード（TikTok開発者/Google APIを利用）。<p><p><strong>数字で見る（ちょっと待って）：</strong><p>• ベース構成（6ゲーム、各5本/日）：<p>&nbsp;&nbsp;&nbsp;&nbsp;◦ 6ゲーム × 5本/日 = 30本/日 → 年間10,950本。<p>• 最大展開（3ジャンルのクイズ × 4言語 + 3つのボールバリエーション = 計15ゲーム）：<p>&nbsp;&nbsp;&nbsp;&nbsp;◦ 15ゲーム × 5本/日 = 75本/日 → 年間27,375本。<p>たとえ、3つのクイズジャンル（翻訳なし）＋2つのボールゲーム＝合計5ゲームにしても：<p>&nbsp;&nbsp;&nbsp;&nbsp;• 5ゲーム × 5本/日 = 25本/日 → 年間9,125本。<p><p><strong>なぜこれが最高か：</strong><p>• クイズゲームはスケーリングが非常に簡単（API/翻訳を切り替えるだけ）。<p>• ボールのバリエーションは半日で作れる。<p>• ゲームあたり5本/日で、たとえ5ゲームでも25K以上の動画/年になる（継続運用すれば）。<p><p><strong>最終目標</strong> は、1日5本の動画を出力するチャンネルを10個運用し、1年以上にわたって動画制作とアップロードが自動化されている状態にすること。月に1回以上手動で介入する必要があるなら、それは失敗と見なします。完全自動化でなければ意味がありません。",
+      "tech": "Pygame, Obs, Bash",
+      "githubUrl": "",
+      "websiteUrl": "",
+      "screenshots": {
+        "desktop": [
+          
+        ],
+        "videos": [
+          {
+            "src": "videos/sgfs/quizzmaster_example.mp4",
+            "caption": "クイズマスター サンプル"
+          },
+          {
+            "src": "videos/sgfs/judjeball_example.mp4",
+            "caption": "ジャッジボール サンプル"
+          }
+        ]
       }
-    
+    }
   }
 }

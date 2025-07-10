@@ -133,7 +133,20 @@
   </section>
 
   <section id="projectsSection" class="content-section projects-section">
-    <div class="projects-grid">
+    <!-- Étape 1: Choix de catégorie -->
+    <div class="category-selection">
+      <div class="category-card" data-category="web">
+        <h3 data-i18n="categoryWeb"></h3>
+        <p data-i18n="categoryWebDescription"></p>
+      </div>
+      <div class="category-card" data-category="other">
+        <h3 data-i18n="categoryOther"></h3>
+        <p data-i18n="categoryOtherDescription"></p>
+      </div>
+    </div>
+    
+    <!-- Étape 2: Projets Web (actuels) -->
+    <div class="projects-grid web-projects" style="display: none;">
       <div class="project-card" data-project="project1">
         <h3 data-i18n="project1Title"></h3>
       </div>
@@ -150,6 +163,15 @@
         <h3 data-i18n="project5Title"></h3>
       </div>
     </div>
+    
+    <!-- Étape 3: Projets Other (nouveaux) -->
+    <div class="projects-grid other-projects" style="display: none;">
+      <div class="project-card" data-project="other1">
+        <h3 data-i18n="other1Title"></h3>
+      </div>
+      
+    </div>
+    
     <div class="project-details" id="projectDetails"></div>
   </section>
 

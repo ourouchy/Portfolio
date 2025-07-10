@@ -27,7 +27,12 @@
   "project3Title": "SliceMyPDF",
   "project4Title": "Infoweb France",
   "project5Title": "Polyglow",
-
+  "other1Title": "SGFS",
+  "categoryWeb": "Web Applications",
+  "categoryWebDescription": "Full-stack web applications, e-commerce platforms, and web tools",
+  "categoryOther": "Other Projects",
+  "categoryOtherDescription": "Mobile apps, desktop applications, and other software projects",
+  "backToCategories": "Back to Categories",
 
   "screenshotsLabel": "Application Screenshots",
   "desktopLabel": "Desktop Interface",
@@ -300,7 +305,29 @@
     }
   ]
 }
+    },
+    "other1": {
+      "title": "Scripted Game Film Studio",
+      "description": "This program is my first attempt at automation. I'm starting with something not that complex, but it's a good start. The goal is to automate the creation of thousands of unique videos for multiple social media platforms.",
+      "details": "I wrote a bash script that runs my Pygame projects, records sessions, and auto-uploads them. The goal? At least 6 games to make automation worth it. Right now, I've got:<p><p>1. <strong>Bouncing Ball</strong> – Basicly my introduction to Pygame. Simple, but I'll tweak it into 2-3 versions (different speeds, themes, etc.).<p>2. <strong>Quiz Game</strong> – The cow. Pulls questions from a trivia API, with random characters for fresh UI each session.<p>&nbsp;&nbsp;&nbsp;&nbsp;◦ Can split this into 3 genres (general knowledge, history, pop culture) and 4 languages (same content, wider reach).<p><p><strong>How It Works:</strong><p>• 66-second sessions (6 questions each).<p>• Fully automated recording (with a python script that uses OBS WebSockets) + uploading (TikTok developers/Google APIs).<p><p><strong>The Numbers (Hold On):</strong><p>• Base Setup (6 games, 5 vids/day each):<p>&nbsp;&nbsp;&nbsp;&nbsp;◦ 6 games × 5 vids/day = 30 vids/day → 10,950 vids/year.<p>• Max Expansion (3 quiz genres × 4 langs + 3 ball variants = 15 games):<p>&nbsp;&nbsp;&nbsp;&nbsp;◦ 15 games × 5 vids/day = 75 vids/day → 27,375 vids/year.<p>Even if I only do 3 quiz genres (no translations) + 2 ball games = 5 total:<p>&nbsp;&nbsp;&nbsp;&nbsp;• 5 games × 5 vids/day = 25 vids/day → 9,125 vids/year.<p><p><strong>Why It Slaps:</strong><p>• The quiz game scales stupidly easy (just swap APIs/translations).<p>• Bouncing ball variants take an afternoon to tweak.<p>• At 5 vids/game/day, even 5 games = 25K+ vids/year if I run it nonstop.<p><p><strong>Main end goal</strong> is to have 10 channels that pops out 5 videos per day with video production and uploading automated for more than a year. If I have to intervene more than 1 time a month, I'll consider it a failure. It's has to be fully automated or there is no point.",
+      "tech": "Pygame, Obs, Bash",
+      "githubUrl": "",
+      "websiteUrl": "",
+      "screenshots": {
+        "desktop": [
+          
+        ],
+        "videos": [
+          {
+            "src": "videos/sgfs/quizzmaster_example.mp4",
+            "caption": "QuizMaster Sample"
+          },
+          {
+            "src": "videos/sgfs/judjeball_example.mp4",
+            "caption": "JudjeBall Sample"
+          }
+        ]
+      }
     }
-
   }
 }

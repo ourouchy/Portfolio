@@ -1,5 +1,6 @@
 let currentLanguage = 'en';
 let currentTranslations = {};
+let currentCategory = null; // Nouvelle variable pour suivre la catégorie actuelle
 
 // Load translations asynchronously
 async function loadTranslations(lang) {
@@ -35,6 +36,12 @@ function applyTranslations() {
       }
     }
   });
+
+  // Update back to categories button if it exists
+  const backButton = document.querySelector('.back-to-categories');
+  if (backButton && currentTranslations.backToCategories) {
+    backButton.innerHTML = `<i class="fas fa-arrow-left"></i> ${currentTranslations.backToCategories}`;
+  }
 
   // Update active project if one is open
   const activeProject = document.querySelector('.project-card:not(.inactive)');
@@ -103,13 +110,14 @@ function renderProjectDetails(projectId) {
   `;
 
   // If there's a screenshots object, render "enhanced" layout
-  if (screenshots && (screenshots.desktop || screenshots.mobile)) {
+  if (screenshots && (screenshots.desktop || screenshots.mobile || screenshots.videos)) {
     html += `
       <div class="project-screenshots">
         <h3>${currentTranslations.screenshotsLabel || 'Application Screenshots'}</h3>
-        <div class="screenshots-container ${screenshots.desktop && !screenshots.mobile ? 'single-column' : ''}">
+        <div class="screenshots-container ${screenshots.desktop && !screenshots.mobile && !screenshots.videos ? 'single-column' : ''}">
           ${screenshots.desktop ? renderScreenshotsGroup('desktop', screenshots.desktop) : ''}
           ${screenshots.mobile ? renderScreenshotsGroup('mobile', screenshots.mobile) : ''}
+          ${screenshots.videos ? renderVideosGroup(screenshots.videos) : ''}
         </div>
       </div>
     `;
@@ -119,7 +127,7 @@ function renderProjectDetails(projectId) {
   if (details) {
     html += `
       <div class="details-content">
-        <p>${details}</p>
+        <div>${details}</div>
       </div>
     `;
   }
@@ -210,6 +218,27 @@ function renderScreenshotsGroup(type, screenshotsArray) {
   return groupHTML;
 }
 
+// Nouvelle fonction pour afficher les vidéos
+function renderVideosGroup(videosArray) {
+  if (!videosArray || !Array.isArray(videosArray) || !videosArray.length) {
+    return '';
+  }
+  let groupHTML = `<div class="video-group">`;
+  videosArray.forEach(video => {
+    groupHTML += `
+      <div class="screenshot">
+        <video controls style="width:100%;border-radius:4px;">
+          <source src="${video.src}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="caption">${video.caption || ''}</p>
+      </div>
+    `;
+  });
+  groupHTML += `</div>`;
+  return groupHTML;
+}
+
 // Show project details with animation
 function showProjectDetails(projectId) {
   const detailsContainer = document.getElementById('projectDetails');
@@ -234,6 +263,78 @@ function showProjectDetails(projectId) {
       detailsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }, 300);
+}
+
+// New function to handle category selection
+function selectCategory(category) {
+  currentCategory = category;
+  
+  // Hide category selection
+  document.querySelector('.category-selection').style.display = 'none';
+  
+  // Show appropriate projects grid
+  if (category === 'web') {
+    document.querySelector('.web-projects').style.display = 'flex';
+    document.querySelector('.other-projects').style.display = 'none';
+  } else if (category === 'other') {
+    document.querySelector('.web-projects').style.display = 'none';
+    document.querySelector('.other-projects').style.display = 'flex';
+  }
+  
+  // Add back to categories button
+  addBackToCategoriesButton();
+  
+  // Reset project details
+  document.getElementById('projectDetails').innerHTML = '';
+  document.getElementById('projectDetails').classList.remove('active');
+  
+  // Reset all project cards
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.classList.remove('inactive');
+  });
+}
+
+// Function to add back to categories button
+function addBackToCategoriesButton() {
+  const projectsSection = document.getElementById('projectsSection');
+  const existingButton = document.querySelector('.back-to-categories');
+  
+  if (!existingButton) {
+    const backButton = document.createElement('button');
+    backButton.className = 'back-to-categories';
+    backButton.innerHTML = `<i class="fas fa-arrow-left"></i> ${currentTranslations.backToCategories || 'Back to Categories'}`;
+    backButton.onclick = showCategorySelection;
+    
+    // Insert at the beginning of the projects section
+    projectsSection.insertBefore(backButton, projectsSection.firstChild);
+  }
+}
+
+// Function to show category selection
+function showCategorySelection() {
+  currentCategory = null;
+  
+  // Hide all project grids
+  document.querySelector('.web-projects').style.display = 'none';
+  document.querySelector('.other-projects').style.display = 'none';
+  
+  // Show category selection
+  document.querySelector('.category-selection').style.display = 'flex';
+  
+  // Remove back button
+  const backButton = document.querySelector('.back-to-categories');
+  if (backButton) {
+    backButton.remove();
+  }
+  
+  // Reset project details
+  document.getElementById('projectDetails').innerHTML = '';
+  document.getElementById('projectDetails').classList.remove('active');
+  
+  // Reset all project cards
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.classList.remove('inactive');
+  });
 }
 
 
@@ -391,6 +492,11 @@ function switchContent(sectionId) {
   
   // Close contact dropdown if open
   document.getElementById('contactDropdown').style.display = 'none';
+  
+  // Reset projects section if switching to it
+  if (sectionId === 'projectsSection') {
+    showCategorySelection();
+  }
 }
 
 // Update navigation active states
@@ -475,17 +581,32 @@ function initEventListeners() {
     toggleContactDropdown();
   });
 
-  // Project cards
-  document.querySelectorAll('.project-card').forEach(card => {
+  // Category cards
+  document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', () => {
-      showProjectDetails(card.dataset.project);
+      selectCategory(card.dataset.category);
     });
   });
 
+  // Project cards (will be re-initialized when categories are selected)
+  function initProjectCardListeners() {
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        showProjectDetails(card.dataset.project);
+      });
+    });
+  }
+
+  // Initialize project card listeners initially
+  initProjectCardListeners();
+
   // "Voir mes projets" button
-  document.getElementById('view-projects-btn').addEventListener('click', () => {
-    switchContent('projectsSection');
-  });
+  const viewProjectsBtn = document.getElementById('view-projects-btn');
+  if (viewProjectsBtn) {
+    viewProjectsBtn.addEventListener('click', () => {
+      switchContent('projectsSection');
+    });
+  }
 
   // Handle keyboard navigation
   document.addEventListener('keydown', (e) => {
