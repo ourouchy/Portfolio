@@ -7,7 +7,7 @@
   "heroDescription": "Developer specialized in designing and optimizing web applications. I combine technical expertise with an architectural mindset to deliver reliable, scalable solutions.",
   "heroSubtitle": "Full Stack Developer",
   "professionalStatement": "With extensive full-stack experience and a strong interest in AI, I translate business requirements into high-performance, long-lasting software.",
-  "approachStatement": "I'm currently transitioning from Vue.js to React, in line with Laravel's evolving ecosystem, to deliver more scalable and maintainable applications.",
+  "approachStatement": "",
   "techStack.title": "Tech Stack",
   "techStack.categories.backend": "Backend",
   "techStack.categories.frontend": "Frontend",

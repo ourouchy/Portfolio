@@ -7,7 +7,7 @@
   "heroDescription": "Développeur spécialisé dans la conception et l'optimisation d'applications web. J'allie expertise technique et sens de l'architecture pour proposer des solutions fiables et évolutives.",
   "heroSubtitle": "Développeur Full Stack",
   "professionalStatement": "Fort d'une expérience approfondie en développement full stack et d'un intérêt marqué pour l'IA, je traduis les besoins métiers en logiciels performants et pérennes.",
-  "approachStatement": "Je migre actuellement de Vue.js à React, en phase avec l'évolution de l'écosystème Laravel, afin de proposer des applications plus évolutives et faciles à maintenir.",
+  "approachStatement": "",
   "techStack.title": "Technologie",
   "techStack.categories.backend": "Backend",
   "techStack.categories.frontend": "Frontend",

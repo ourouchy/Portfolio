@@ -7,7 +7,7 @@
   "heroDescription": "ウェブアプリケーションの設計と最適化を専門とする開発者。技術的専門知識とアーキテクチャ的思考を組み合わせ、信頼性が高くスケーラブルなソリューションを提供します。",
   "heroSubtitle": "フルスタック開発者",
   "professionalStatement": "豊富なフルスタック開発経験とAIへの強い関心を持ち、ビジネス要件を高性能で長期的なソフトウェアに変換します。",
-  "approachStatement": "現在、Vue.jsからReactへの移行を進めており、Laravelの進化するエコシステムに沿って、よりスケーラブルでメンテナンス性の高いアプリケーションを構築しています。",
+  "approachStatement": "",
   "techStack.title": "使用技術",
   "techStack.categories.backend": "バックエンド",
   "techStack.categories.frontend": "フロントエンド",
